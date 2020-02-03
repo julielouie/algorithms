@@ -6,7 +6,11 @@ const isPalindrome = function (x) {
     for (let index = 0, backInd = strX.length - 1;
       index <= strX.length/2, backInd >= strX.length/2;
       index++, backInd--) {
-
+        if (strX[index] === strX[backInd]) {
+          continue;
+        } else {
+          return false;
+        }
     }
   }
   return true;
