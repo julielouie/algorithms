@@ -6,6 +6,8 @@ String.prototype.consonants = function () {
 }
 
 String.prototype.vowels = function () {
-  // Write your code here
-
+  const vowStr = this.toLowerCase().split('').filter(element => {
+    return element === 'a' || element === 'e' || element === 'i' || element === 'o' || element === 'u';
+  })
+  return vowStr.length;
 }
