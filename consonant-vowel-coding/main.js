@@ -7,9 +7,9 @@ function stringCode(sentence) {
     let consCount = 0;
     let vowCount = 0;
     for (let index = 0; index < element.length; index++) {
-      if (element !== 'a' && element !== 'e' && element !== 'i' && element !== 'o' && element !== 'u') {
+      if (element[index] !== 'a' && element[index] !== 'e' && element[index] !== 'i' && element[index] !== 'o' && element[index] !== 'u') {
         consCount++;
-      } else if (element === 'a' || element === 'e' || element === 'i' || element === 'o' || element === 'u') {
+      } else if (element[index] === 'a' || element[index] === 'e' || element[index] === 'i' || element[index] === 'o' || element[index] === 'u') {
         vowCount++;
       }
     }
@@ -20,3 +20,5 @@ function stringCode(sentence) {
   vowels = vowels.join(' ');
   return [consonants, vowels];
 }
+
+console.log(stringCode('I\'d like to drink my first glass of champagne.'));
