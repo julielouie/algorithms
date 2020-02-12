@@ -1,5 +1,5 @@
 function stringCode(sentence) {
-  const separatedLowCase = sentence.toLowerCase().split(' ');
+  const separatedLowCase = sentence.toLowerCase().replace(/[^a-zA-Z ]/g, "").split(' ');
   const splitLetters = separatedLowCase.map(element => element.split(''));
   let consonants = [];
   let vowels = [];
