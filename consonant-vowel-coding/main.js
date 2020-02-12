@@ -1,0 +1,3 @@
+function stringCode(sentence) {
+
+}
