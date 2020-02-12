@@ -20,5 +20,3 @@ function stringCode(sentence) {
   vowels = vowels.join(' ');
   return [consonants, vowels];
 }
-
-console.log(stringCode('I\'d like to drink my first glass of champagne.'));
