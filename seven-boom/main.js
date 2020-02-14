@@ -11,6 +11,7 @@ function sevenBoom(arr) {
 }
 
 const sevenArr = [1, 2, 3, 4, 5, 6, 7];
+const insideSeven = [12, 14, 15, 17, 23, 39];
 const noSevenArr = [1, 2, 3, 4, 5, 6, 8];
 
 console.log(sevenBoom(insideSeven));
