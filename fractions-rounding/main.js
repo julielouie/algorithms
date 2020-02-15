@@ -5,5 +5,3 @@ function fracRound(frac, n) {
   const result = (num1 / num2).toFixed(n);
   return `${frac} rounded to ${n} decimal places is ${result}`;
 }
-
-console.log(fracRound("2/8", 5));
