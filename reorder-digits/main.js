@@ -30,7 +30,3 @@ function reorderDigits(arr, direction) {
   }
   return arr;
 }
-
-const ascArray = [515, 341, 98, 44, 211];
-console.log(reorderDigits(ascArray, 'asc'));
-console.log(reorderDigits(ascArray, 'desc'));
