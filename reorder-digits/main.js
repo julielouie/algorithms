@@ -18,7 +18,7 @@ function reorderDigits(arr, direction) {
       const strElem = element.toString();
       for (let index = 0; index < strElem.length; index++) {
         for (let index2 = 0; index2 < strElem.length; index2++) {
-          if (strElem[index2] > strElem[index2 + 1]) {
+          if (strElem[index2] < strElem[index2 + 1]) {
             let temp = strElem[index2];
             strElem[index2] = strElem[index2 + 1];
             strElem[index2 + 1] = temp;
