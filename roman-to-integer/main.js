@@ -1,4 +1,5 @@
 const romanToInt = function (s) {
+  debugger;
   let result = 0, num = 0;
   for (let index = 0; index < s.length; index++) {
     if (s[index] === 'I') {
@@ -14,7 +15,7 @@ const romanToInt = function (s) {
     } else if (s[index] === 'V') {
       num = 5;
     } else if (s[index] === 'X') {
-      if (s[index + 1] === 'L') {
+      if (s[index] === 'L') {
         num = 40;
         index++;
       } else if (s[index + 1] === 'C') {
@@ -23,7 +24,7 @@ const romanToInt = function (s) {
       } else {
         num = 10;
       }
-    } else if (s[index + 1] === 'L') {
+    } else if (s[index] === 'L') {
       num = 50;
     } else if (s[index] === 'C') {
       if (s[index + 1] === 'D') {
@@ -35,9 +36,9 @@ const romanToInt = function (s) {
       } else {
         num = 100;
       }
-    } else if (s[index + 1] === 'D') {
+    } else if (s[index] === 'D') {
       num = 500;
-    } else if (s[index + 1] === 'M') {
+    } else if (s[index] === 'M') {
       num = 1000;
     }
     result += num;
@@ -51,4 +52,4 @@ const nine = 'IX';
 const fiftyEight = 'LVIII';
 const nineteen94 = 'MCMXCIV';
 
-console.log(romanToInt(three));
+console.log(romanToInt(fiftyEight));
