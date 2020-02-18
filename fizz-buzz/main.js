@@ -11,6 +11,4 @@ const fizzBuzz = function (n) {
       console.log(index);
     }
   }
-};
-
-fizzBuzz(15);
+}
