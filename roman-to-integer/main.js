@@ -44,7 +44,3 @@ const romanToInt = function (s) {
   }
   return result;
 };
-
-const three045 = 'MMMXLV';
-
-console.log(romanToInt(three045));
