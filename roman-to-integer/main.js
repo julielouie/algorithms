@@ -35,7 +35,20 @@ const romanToInt = function (s) {
       } else {
         num = 100;
       }
+    } else if (s[index + 1] === 'D') {
+      num = 500;
+    } else if (s[index + 1] === 'M') {
+      num = 1000;
+    }
     result += num;
   }
   return result;
 };
+
+const three = 'III';
+const four = 'IV';
+const nine = 'IX';
+const fiftyEight = 'LVIII';
+const nineteen94 = 'MCMXCIV';
+
+console.log(romanToInt(three));
