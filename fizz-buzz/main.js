@@ -1,0 +1,3 @@
+const fizzBuzz = function (n) {
+
+};
