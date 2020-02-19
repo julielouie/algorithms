@@ -18,4 +18,4 @@ const misSeq2 = [2, 7, 8, 9];
 const awkNum1 = [44, 46];
 const awkNum2 = [45];
 
-console.log(consecutiveCombo(seq1, seq2));
+console.log(consecutiveCombo(awkNum1, awkNum2));
