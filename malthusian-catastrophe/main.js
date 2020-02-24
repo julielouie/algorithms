@@ -9,5 +9,3 @@ function malthusian(foodGrowth, popMult) {
   }
   return year;
 }
-
-console.log(malthusian(3900, 1.26));
