@@ -1,0 +1,3 @@
+function malthusian(foodGrowth, popMult) {
+
+}
