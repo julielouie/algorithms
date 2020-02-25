@@ -7,4 +7,5 @@ function objectToArray(obj) {
     objArray.push([element, values[valueIndex]]);
     valueIndex++;
   })
+  return objArray;
 }
