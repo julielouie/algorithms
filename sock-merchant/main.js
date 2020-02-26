@@ -26,8 +26,15 @@ function readLine() {
 
 // Complete the sockMerchant function below.
 function sockMerchant(n, ar) {
-
-
+  let pairCount = 0;
+  for (let sockIndex = 0; sockIndex < n; sockIndex++) {
+    for (let secondSockInd = 0; secondSockInd < n; secondSockInd++) {
+      if (ar[sockIndex] === ar[secondSockInd]) {
+        pairCount++;
+      }
+    }
+  }
+  return pairCount;
 }
 
 function main() {
