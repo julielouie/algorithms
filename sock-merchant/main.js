@@ -1,11 +1,11 @@
 function sockMerchant(n, ar) {
   let pairCount = 0;
-  debugger;
-  for (let sockIndex = 0; sockIndex < n; sockIndex++) {
-    for (let secondSockInd = 0; secondSockInd < ar.length; secondSockInd++) {
+  for (let sockIndex = 0; sockIndex < ar.length; sockIndex++) {
+    for (let secondSockInd = ar.length - 1; secondSockInd >= 0; secondSockInd--) {
       if (sockIndex === secondSockInd) {
         continue;
       } else if (ar[sockIndex] === ar[secondSockInd]) {
+        ar.splice(secondSockInd, 1);
         pairCount++;
       }
     }
