@@ -5,6 +5,7 @@ function sockMerchant(n, ar) {
       if (sockIndex === secondSockInd) {
         continue;
       } else if (ar[sockIndex] === ar[secondSockInd]) {
+        ar.splice(sockIndex, 1);
         ar.splice(secondSockInd, 1);
         pairCount++;
       }
