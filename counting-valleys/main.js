@@ -21,8 +21,3 @@ function countingValleys(n, s) {
   }
   return valleys;
 }
-
-const nEx = 8;
-const strEx = 'UDDDUDUU';
-
-console.log(countingValleys(nEx, strEx));
