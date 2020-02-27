@@ -4,12 +4,15 @@ function jumpingOnClouds(c) {
     if (c[index] === 1) {
       continue;
     } else if (index !== c.length - 1) {
+      if (c[index] === c[index + 1] && c[index] === c[index + 2]) {
+        continue;
+      }
       jumps++;
     }
   }
   return jumps;
 }
 
-const cloudArray = [0, 0, 1, 0, 0, 1, 0];
+const cloudArray = [0, 0, 0, 1, 0, 0];
 
 console.log(jumpingOnClouds(cloudArray));
