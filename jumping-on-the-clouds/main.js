@@ -5,6 +5,8 @@ function jumpingOnClouds(c) {
       continue;
     } else if (index !== c.length - 1) {
       if (c[index] === c[index + 1] && c[index] === c[index + 2]) {
+        jumps++;
+        index++;
         continue;
       }
       jumps++;
