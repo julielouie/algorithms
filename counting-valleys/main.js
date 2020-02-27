@@ -1,20 +1,28 @@
 function countingValleys(n, s) {
-  const stepCount = [];
-  for (let index = 0; index < s.length; index++) {
-    let character = s[index];
-    switch (character) {
+  let valleys = 0;
+  let stepCount = 0;
+  const steps = [];
+  const strArray = s.split('');
+  strArray.forEach(element => {
+    switch (element) {
       case 'U':
-        stepCount.push(1);
+        steps.push(1);
         break;
       case 'D':
-        stepCount.push(-1);
+        steps.push(-1);
         break;
     }
+  });
+  for (let index = 0; index < steps.length; index++) {
+    stepCount += steps[index];
+    if (steps[index] === 1 && stepCount === 0) {
+      valleys++;
+    }
   }
-  console.log(stepCount);
+  return valleys;
 }
 
 const nEx = 8;
 const strEx = 'UDDDUDUU';
 
-countingValleys(nEx, strEx);
+console.log(countingValleys(nEx, strEx));
