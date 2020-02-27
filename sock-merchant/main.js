@@ -1,14 +1,10 @@
 function sockMerchant(n, ar) {
+  const sortedSocks = ar.sort((a, b) => a - b);
   let pairCount = 0;
-  for (let sockIndex = 0; sockIndex < ar.length; sockIndex++) {
-    for (let secondSockInd = ar.length - 1; secondSockInd >= 0; secondSockInd--) {
-      if (sockIndex === secondSockInd) {
-        continue;
-      } else if (ar[sockIndex] === ar[secondSockInd]) {
-        ar.splice(sockIndex, 1);
-        ar.splice(secondSockInd, 1);
-        pairCount++;
-      }
+  for (let sockIndex = 0; sockIndex < n; sockIndex++) {
+    if (sortedSocks[sockIndex] === sortedSocks[sockIndex + 1]) {
+      pairCount++;
+      sockIndex++;
     }
   }
   return pairCount;
