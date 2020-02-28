@@ -1,0 +1,4 @@
+function repeatedString(s, n) {
+
+
+}
