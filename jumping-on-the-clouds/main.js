@@ -14,7 +14,3 @@ function jumpingOnClouds(c) {
   }
   return jumps;
 }
-
-const cloudArray = [0, 0, 0, 1, 0, 0];
-
-console.log(jumpingOnClouds(cloudArray));
