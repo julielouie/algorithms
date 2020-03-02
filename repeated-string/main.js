@@ -7,8 +7,3 @@ function repeatedString(s, n) {
 
   return aTotal;
 }
-
-const str = 'aba';
-const length = 10;
-
-console.log(repeatedString(str, length));
