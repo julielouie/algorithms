@@ -10,3 +10,9 @@ function oddishOrEvenish(num) {
     return 'Evenish';
   }
 }
+
+const num1 = 43;
+const num2 = 373;
+const num3 = 4433;
+
+console.log(oddishOrEvenish(num1));
