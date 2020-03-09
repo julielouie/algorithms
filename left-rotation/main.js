@@ -1,7 +1,7 @@
 function rotLeft(a, d) {
   const removed = a.splice(0, d);
-  a.concat(removed);
-  return a;
+  const rotated = a.concat(removed);
+  return rotated;
 }
 
 const array = [1, 2, 3, 4, 5];
