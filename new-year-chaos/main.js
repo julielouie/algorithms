@@ -1,4 +1,5 @@
 function minimumbribeCount(q) {
+  let chaos = false;
   let count = 0;
   const bribeCount = {};
   for (let index = 0; index < q.length; index++) {
@@ -7,25 +8,26 @@ function minimumbribeCount(q) {
         bribeCount[q[index]] = 0;
       }
       bribeCount[q[index]] += 1;
+      if (bribeCount[q[index]] > 2) {
+        chaos = true;
+      }
       let temp = q[index];
       q[index] = q[index + 1];
       q[index + 1] = temp;
       count++;
-      index = 0;
+      index = -1;
     }
   }
-  const bribes = Object.values(bribeCount);
-  const chaos = bribes.filter(element => element > 2);
-  if (chaos.length === 0) {
-    return count;
-  } else {
-    return 'Too chaotic';
+  if (chaos) {
+    count = 'Too chaotic';
   }
+  return count;
 }
 
-const queue2 = [2, 1, 5, 3, 4];
+const queue = [2, 5, 1, 3, 4]
+const queue2 = [3, 2, 1, 5, 4, 6];
 
-console.log(minimumbribeCount(queue2));
+console.log(minimumbribeCount(queue));
 
 
 //Hi Julie, I made a solution because I was curious. It's below. I don't know if it works on HR
