@@ -4,6 +4,9 @@ function minimumbribeCount(q) {
   for (let index = 0; index < q.length; index++) {
     for (let innerIndex = 0; innerIndex < q.length; innerIndex++) {
       if (q[innerIndex] > q[innerIndex + 1]) {
+        if (bribeCount[q[innerIndex]] === undefined) {
+          bribeCount[q[innerIndex]] = 0;
+        }
         bribeCount[q[innerIndex]] += 1;
         let temp = q[innerIndex];
         q[innerIndex] = q[innerIndex + 1];
@@ -12,7 +15,13 @@ function minimumbribeCount(q) {
       }
     }
   }
-
+  const bribes = Object.values(bribeCount);
+  const chaos = bribes.filter(element => element > 2);
+  if (chaos.length === 0) {
+    return count;
+  } else {
+    return 'Too chaotic';
+  }
 }
 
 const queue = [2, 1, 5, 3, 4];
