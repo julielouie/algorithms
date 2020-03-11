@@ -23,7 +23,3 @@ function minimumbribeCount(q) {
     return 'Too chaotic';
   }
 }
-
-const queue = [2, 1, 5, 3, 4];
-
-console.log(minimumbribeCount(queue));
