@@ -4,7 +4,7 @@ function minimumbribeCount(q) {
   for (let index = 0; index < q.length; index++) {
     for (let innerIndex = 0; innerIndex < q.length; innerIndex++) {
       if (q[innerIndex] > q[innerIndex + 1]) {
-        bribeCount[q[innerIndex]] += bribeCount[q[innerIndex]];
+        bribeCount[q[innerIndex]] += 1;
         let temp = q[innerIndex];
         q[innerIndex] = q[innerIndex + 1];
         q[innerIndex + 1] = temp;
@@ -14,3 +14,7 @@ function minimumbribeCount(q) {
   }
 
 }
+
+const queue = [2, 1, 5, 3, 4];
+
+console.log(minimumbribeCount(queue));
