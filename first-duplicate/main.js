@@ -3,10 +3,9 @@ function firstDuplicate(a) {
   let tempIndex = [];
   for (let outerIndex = 0; outerIndex < a.length; outerIndex++) {
     temp = a[outerIndex];
-    tempIndex.push({[temp]: outerIndex});
     a.forEach((element, index) => {
       if (temp === element && outerIndex !== index) {
-        tempIndex.push({ [temp]: index });
+        tempIndex.push({ [temp]: [outerIndex, index] });
       }
     });
   }
