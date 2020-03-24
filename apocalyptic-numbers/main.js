@@ -7,14 +7,3 @@ function apocalyptic(n) {
   }
   return 'Crisis averted. Resume sinning.';
 }
-
-
-const num1 = 109;
-
-const num2 = 157;
-
-const num3 = 499;
-
-const num4 = 666;
-
-console.log(apocalyptic(num2));
