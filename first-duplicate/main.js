@@ -9,7 +9,3 @@ function firstDuplicate(a) {
   }
   return -1;
 }
-
-const a = [2, 1, 3, 5, 3, 2];
-
-console.log(firstDuplicate(a));
