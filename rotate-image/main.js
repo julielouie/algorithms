@@ -8,7 +8,7 @@ function rotateImage(a) {
     count++;
     imgStr += innerA;
     if (imgStr.length % 3 === 0) imgStr += ' ';
-    if (count === innerLength) count = 0;
+    if (count === innerLength + 1) count = 0;
     if (innerA === a[0][innerLength]) break;
     if (index === 0) index = a.length - 1;
   }
