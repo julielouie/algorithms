@@ -1,5 +1,4 @@
 function rotateImage(a) {
-  const newA = [];
   let imgStr = '';
   let innerLength = a[0].length - 1;
   let count = 0;
@@ -15,7 +14,11 @@ function rotateImage(a) {
     if (count === innerLength + 1) count = 0;
   }
   let newArray = imgStr.split(' ');
-  console.log(newArray)
+  newArray = newArray.map(element => {
+    parseInt(element);
+    return element.split('');
+  })
+  return newArray;
 }
 
 const a = [
