@@ -6,14 +6,15 @@ function rotateImage(a) {
   for (let index = a.length - 1; index > -1; index--) {
     let innerA = a[index][count];
     imgStr += innerA;
-    if (imgStr.length % 3 === 0) imgStr += ' ';
     if (innerA === a[0][innerLength]) break;
     if (index === 0) {
+      imgStr += ' ';
       count++;
-      index = a.length - 1;
+      index = a.length;
     }
     if (count === innerLength + 1) count = 0;
   }
+  console.log(imgStr)
 }
 
 const a = [
