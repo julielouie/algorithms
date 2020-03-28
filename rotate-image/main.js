@@ -15,8 +15,7 @@ function rotateImage(a) {
   }
   let newArray = imgStr.split(' ');
   newArray = newArray.map(element => {
-    parseInt(element);
-    return element.split('');
+    return element.split('').map(Number);
   })
   return newArray;
 }
