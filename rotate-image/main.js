@@ -14,7 +14,8 @@ function rotateImage(a) {
     }
     if (count === innerLength + 1) count = 0;
   }
-  console.log(imgStr)
+  let newArray = imgStr.split(' ');
+  console.log(newArray)
 }
 
 const a = [
