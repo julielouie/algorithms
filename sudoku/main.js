@@ -1,5 +1,8 @@
 function sudoku2(grid) {
+  const count = 0;
+  for (let index = 0; index < grid.length; index++) {
 
+  }
 }
 
 const grid1 = [ //should be true
