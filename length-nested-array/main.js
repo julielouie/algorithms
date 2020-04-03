@@ -1,5 +1,7 @@
 function getLength(arr) {
-
+  this.reduce((totalLength, element) =>
+    totalLength + (element.length ? element : 1), 0);
+  }
 }
 
 
