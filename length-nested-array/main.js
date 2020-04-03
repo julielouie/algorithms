@@ -1,6 +1,6 @@
 function getLength(arr) {
   this.reduce((totalLength, element) =>
-    totalLength + (element.length ? element : 1), 0);
+    totalLength + (element.length ? element.getLength() : 1), 0);
   }
 }
 
