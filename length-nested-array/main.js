@@ -15,4 +15,4 @@ const a3 = [1, [2, [3, [4, [5, 6]]]]];
 
 const a4 = [1, [2], 1, [2], 1];
 
-console.log(getLength(a1));
+console.log(getLength(a4));
