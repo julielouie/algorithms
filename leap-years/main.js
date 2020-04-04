@@ -14,4 +14,4 @@ const y3 = 2000; //true
 const y4 = 2019; //false
 // It can't be exactly divided by 400 or by 4.
 
-console.log(isLeap());
+console.log(isLeap(y4));
