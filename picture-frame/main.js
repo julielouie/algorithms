@@ -1,4 +1,8 @@
 function getFrame(w, h, ch) {
+  if (w <= 2 || h <= 2) {
+    return 'invalid';
+  }
+
   const frame = [];
   let borderWidth = '';
   let innerWidth = '';
