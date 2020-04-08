@@ -35,8 +35,7 @@ function getFrame(w, h, ch) {
     }
   }
 
-  console.log(frame);
-
+  return frame;
 }
 
 console.log(getFrame(4, 5, "#"));
