@@ -22,13 +22,20 @@ function getFrame(w, h, ch) {
     }
   }
 
-  const lastIndex = frame.length - 1;
-  if (!lastIndex) {
-    frame.push([ ])
+  for (let index = 0; index < h; index++) {
+    const lastIndex = frame.length;
+    if (!lastIndex || lastIndex + 1 === h) {
+      frame.push([borderWidth]);
+    } else if (lastIndex < h) {
+      frame.push([innerWidth]);
+    }
   }
+
+  console.log(frame);
+
 }
 
-// console.log(getFrame(4, 5, "#"));
+console.log(getFrame(4, 5, "#"));
   // [
   //   ["####"],
   //   ["#  #"],
