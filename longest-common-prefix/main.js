@@ -9,6 +9,7 @@ const longestCommonPrefix = function (strArray) {
     }
   }
 
+  return strArray[0];
 };
 
 const strs1 = ["flower", "flow", "flight"];
