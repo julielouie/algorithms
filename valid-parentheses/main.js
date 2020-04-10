@@ -1,13 +1,10 @@
 const isValid = function (pString) {
-  if (!pString) return true;
-
-  let valid = true;
   let symbol = '';
   let first = '';
   let last = '';
   let middle = 0;
 
-  while (valid) {
+  while (pString) {
     first = pString[0];
 
     switch (first) {
@@ -34,6 +31,8 @@ const isValid = function (pString) {
       pString = pString.slice(1, last);
     }
   }
+
+  return true;
 };
 
 
