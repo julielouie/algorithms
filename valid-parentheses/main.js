@@ -32,7 +32,7 @@ const isValid = function (pString) {
     if (middle % 2 !== 0) {
       return false;
     } else {
-      pString = pString.slice(1, last);
+      pString = pString.slice(last + 1);
     }
   }
 
@@ -52,5 +52,7 @@ const case5 = "{[]}";
   // true
 const case6 = "[])";
   // false
+const case7 = "{}{}()[]";
+  // true
 
-console.log(isValid(case6));
+console.log(isValid(case7));
