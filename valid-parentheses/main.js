@@ -25,7 +25,10 @@ const isValid = function (pString) {
     if (last === -1) return false;
 
     middle = last - 1;
-    if (!middle) return true;
+    if (!middle) {
+      pString = pString.slice(last + 1);
+      continue;
+    }
     if (middle % 2 !== 0) {
       return false;
     } else {
@@ -47,5 +50,7 @@ const case4 = "([)]";
   // false
 const case5 = "{[]}";
   // true
+const case6 = "[])";
+  // false
 
-console.log(isValid(case5));
+console.log(isValid(case6));
