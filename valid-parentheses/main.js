@@ -48,4 +48,4 @@ const case4 = "([)]";
 const case5 = "{[]}";
   // true
 
-console.log(isValid(case5));
+console.log(isValid(case1));
