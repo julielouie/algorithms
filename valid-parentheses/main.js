@@ -1,47 +1,25 @@
 const isValid = function (pString) {
-  let symbol = '';
-  let first = '';
-  let last = '';
-  let middle = 0;
-debugger;
-  while (pString) {
-    first = pString[0];
+  let symbols = {
+    ")": "(",
+    "]": "[",
+    "}": "{"
+  }
 
-    switch (first) {
-      case '(':
-        symbol = ')';
-        break;
-      case '[':
-        symbol = ']';
-        break;
-      case '{':
-        symbol = '}';
-        break;
-      default:
-        return false;
+  let openingArray = [];
+
+  for (let i = 0; i < pString.length; i++) {
+    if (pString[i] === "(" || pString[i] === "[" || pString[i] === "{") {
+      openingArray.push(pString[i]);
     }
-
-    last = pString.lastIndexOf(symbol);
-    if (last === -1) return false;
-
-    middle = last - 1;
-    if (!middle) {
-      pString = pString.slice(last + 1);
-      continue;
-    } else if (middle % 2 !== 0) {
-      return false;
-    } else {
-      const currentPiece = pString.slice(1, last);
-      if (currentPiece.includes(symbol)) {
-        last = pString.indexOf(symbol);
-        pString = pString.slice(last + 1);
-        continue;
+    else {
+      if (openingArray[openingArray.length - 1] === symbols[pString[i]]) {
+        openingArray.pop();
       }
-      pString = pString.slice(1, last);
+      else return false;
     }
   }
 
-  return true;
+  return openingArray.length === 0 ? true : false;
 };
 
 
@@ -61,5 +39,9 @@ const case7 = "{}{}()[]";
   // true
 const case8 = "{{)}";
   // false
+const case9 = "(([]){})";
+  // true
+const case10 = "[({(())}[()])]";
+  // true
 
-console.log(isValid(case8));
+console.log(isValid(case10));
