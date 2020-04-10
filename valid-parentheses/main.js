@@ -3,7 +3,7 @@ const isValid = function (pString) {
   let first = '';
   let last = '';
   let middle = 0;
-
+debugger;
   while (pString) {
     first = pString[0];
 
@@ -28,11 +28,16 @@ const isValid = function (pString) {
     if (!middle) {
       pString = pString.slice(last + 1);
       continue;
-    }
-    if (middle % 2 !== 0) {
+    } else if (middle % 2 !== 0) {
       return false;
     } else {
-      pString = pString.slice(last + 1);
+      const currentPiece = pString.slice(1, last);
+      if (currentPiece.includes(symbol)) {
+        last = pString.indexOf(symbol);
+        pString = pString.slice(last + 1);
+        continue;
+      }
+      pString = pString.slice(1, last);
     }
   }
 
@@ -54,5 +59,7 @@ const case6 = "[])";
   // false
 const case7 = "{}{}()[]";
   // true
+const case8 = "{{)}";
+  // false
 
-console.log(isValid(case7));
+console.log(isValid(case8));
