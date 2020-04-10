@@ -22,8 +22,9 @@ const isValid = function (pString) {
     }
 
     last = pString.lastIndexOf(symbol);
-    middle = last - 1;
+    if (last === -1) return false;
 
+    middle = last - 1;
     if (!middle) return true;
     if (middle % 2 !== 0) {
       return false;
@@ -47,4 +48,4 @@ const case4 = "([)]";
 const case5 = "{[]}";
   // true
 
-console.log(isValid(case1));
+console.log(isValid(case5));
