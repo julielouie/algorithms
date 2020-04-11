@@ -1,11 +1,9 @@
 const removeDuplicates = function (numsArray) {
-  for (let index = 0; index < numsArray.length; index++) {
-    numsArray.forEach((elem, ind) => {
-      if (numsArray[index] === elem && index !== ind) numsArray.splice(ind, 1);
-      });
-  }
-
-  return numsArray;
+  let index = 0;
+  numsArray.forEach(element => {
+    if (element !== numsArray[index]) numsArray[++index] = element;
+  });
+  return index + 1;
 };
 
 const nums1 = [1, 1, 2];
