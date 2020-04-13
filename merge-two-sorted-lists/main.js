@@ -10,6 +10,7 @@ const mergeTwoLists = function (l1, l2) {
       list.next = new ListNode(l2.val)
       l2 = l2.next
     }
+    list = list.next
   }
 
   return head
