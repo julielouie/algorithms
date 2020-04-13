@@ -1,3 +1,8 @@
+function ListNode(data, next) {
+  this.data = data;
+  this.next = next;
+}
+
 const mergeTwoLists = function (l1, l2) {
   let list = new ListNode();
   let head = list;
@@ -13,7 +18,7 @@ const mergeTwoLists = function (l1, l2) {
     list = list.next
   }
 
-  return head
+  return head;
 };
 
 const caseL1 = [1, 2, 4];
