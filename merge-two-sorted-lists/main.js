@@ -18,6 +18,8 @@ const mergeTwoLists = function (l1, l2) {
     list = list.next
   }
 
+  list.next = l1 || l2;
+
   return head;
 };
 
