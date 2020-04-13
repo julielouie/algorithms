@@ -20,7 +20,7 @@ const mergeTwoLists = function (l1, l2) {
 
   list.next = l1 || l2;
 
-  return head;
+  return head.next;
 };
 
 const caseL1 = [1, 2, 4];
