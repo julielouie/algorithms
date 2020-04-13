@@ -7,7 +7,7 @@ const mergeTwoLists = function (l1, l2) {
   let list = new ListNode();
   let head = list;
 
-  while (l1 !== null || l2 !== null) {
+  while (l1 !== null && l2 !== null) {
     if (l1.val < l2.val) {
       list.next = new ListNode(l1.val)
       l1 = l1.next
