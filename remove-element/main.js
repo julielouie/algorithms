@@ -5,10 +5,7 @@ const removeElement = function (nums, val) {
       index--;
     }
   }
-  // nums.forEach((element, index) => {
-  //   if (element === val) nums.splice(index, 1);
-  // })
-  return nums;
+  return nums.length;
 };
 
 const nums1 = [3, 2, 2, 3];
