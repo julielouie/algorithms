@@ -11,11 +11,3 @@ const strStr = function (haystack, needle) {
 
   return -1;
 };
-
-const haystack1 = "hello";
-const needle1 = "ll";
-
-const haystack2 = "aaaaa";
-const needle2 = "bba";
-
-console.log(strStr(haystack2, needle2));
