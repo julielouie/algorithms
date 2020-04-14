@@ -18,4 +18,4 @@ const needle1 = "ll";
 const haystack2 = "aaaaa";
 const needle2 = "bba";
 
-console.log(strStr(haystack1, needle1));
+console.log(strStr(haystack2, needle2));
