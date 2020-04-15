@@ -1,7 +1,8 @@
 const lengthOfLongestSubstring = function (string) {
-  const strSet = string.split('');
-  //strSet = [...new Set(string)];
-  console.log(strSet)
+  const strSet = [...new Set(string)].join('');
+  if (!string.includes(strSet)) {
+    console.log(strSet)
+  }
   return strSet.length;
 };
 
@@ -12,4 +13,4 @@ const string2 = "bbbbb";
 const string3 = "pwwkew";
   // 3 "wke"
 
-console.log(lengthOfLongestSubstring(string1));
+console.log(lengthOfLongestSubstring(string3));
