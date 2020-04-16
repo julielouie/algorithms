@@ -1,5 +1,4 @@
 const longestPalindrome = function (string) {
-  debugger;
   const palindromes = [];
   let index = 0;
   for (let innerIndex = index + 1; innerIndex < string.length; innerIndex++) {
@@ -12,7 +11,8 @@ const longestPalindrome = function (string) {
       innerIndex = index;
     }
   }
-  console.log(palindromes);
+  const longest = palindromes.reduce((a, b) => a.length >= b.length ? a : b, '');
+  return longest;
 };
 
 const s1 = "babad";
