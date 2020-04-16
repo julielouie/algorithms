@@ -24,4 +24,4 @@ const s1 = "babad";
 const s2 = "cbbd";
   // "bb"
 
-console.log(longestPalindrome(s2));
+console.log(longestPalindrome(s1));
