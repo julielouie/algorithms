@@ -19,10 +19,3 @@ const longestPalindrome = function (string) {
   }
   return longest;
 };
-
-const s1 = "babad";
-  // "bab", "aba" also valid
-const s2 = "cbbd";
-  // "bb"
-
-console.log(longestPalindrome(s1));
