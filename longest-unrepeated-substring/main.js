@@ -5,13 +5,13 @@ const lengthOfLongestSubstring = function (string) {
   let resultLength = 0;
 
   while (right < string.length) {
-    const currentChar = string.charAt(right);
+    const currentChar = string[right];
     if (!visited.has(currentChar)) {
       visited.add(currentChar);
       resultLength = Math.max(resultLength, right - left + 1);
       right++;
     } else {
-      visited.delete(string.charAt(left));
+      visited.delete(string[left]);
       left++;
     }
   }
