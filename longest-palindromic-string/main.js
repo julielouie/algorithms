@@ -1,24 +1,22 @@
 const longestPalindrome = function (string) {
-  const palindromes = [];
-  let index = 0;
-  for (let innerIndex = index + 1; innerIndex < string.length; innerIndex++) {
-    let first = string[index];
-    if (first === string[innerIndex]) {
-      let section = string.slice(index, innerIndex + 1);
-      let reversed = section.split('').reverse().join('');
-      if (section === reversed) palindromes.push(section);
+  let longest = '';
+  for (let index = 0; index < string.length; index++) {
+    for (let innerIndex = 0; innerIndex < 2; innerIndex++) {
+      let left = index;
+      let right = index + innerIndex;
+
+      while (left >= 0 && string[left] === string[right]) {
+        left--;
+        right++;
+      }
+
+      if ((right - left - 1) > longest.length) {
+        longest = string.substring(left + 1, right);
+      }
     }
-    if (innerIndex === string.length - 1 && index !== string.length - 1) {
-      index++;
-      innerIndex = index;
-    } else if (innerIndex === string.length - 1 && !palindromes[0]) {
-      palindromes.push(string[index]);
-      index++;
-      innerIndex = index;
-    }
+
+    if (Math.ceil(longest.length / 2) >= string.length - index) break;
   }
-  const longest = palindromes.reduce((a, b) => a.length >= b.length ? a : b, '');
-  if (!palindromes[0]) return string[0];
   return longest;
 };
 
@@ -27,4 +25,4 @@ const s1 = "babad";
 const s2 = "cbbd";
   // "bb"
 
-console.log(longestPalindrome("ccc"));
+console.log(longestPalindrome(s2));
