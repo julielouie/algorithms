@@ -10,6 +10,10 @@ const longestPalindrome = function (string) {
       index++;
       innerIndex = index;
     }
+    if (innerIndex === string.length - 1 && !palindromes[0]) {
+      index++;
+      innerIndex = index;
+    }
   }
   const longest = palindromes.reduce((a, b) => a.length >= b.length ? a : b, '');
   return longest;
@@ -20,4 +24,4 @@ const s1 = "babad";
 const s2 = "cbbd";
   // "bb"
 
-console.log(longestPalindrome(s1));
+console.log(longestPalindrome(s2));
