@@ -11,7 +11,8 @@ const myAtoi = function (string) {
       continue;
     }
   }
-  newStr = parseInt(newStr);
+  let isValid = ((+newStr) | 0) == newStr;
+  console.log(isValid);
   console.log('number: ', newStr)
 };
 
