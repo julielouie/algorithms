@@ -28,12 +28,3 @@ const myAtoi = function (string) {
 
   return Math.max(-(2 ** 31), Math.min(2 ** 31 - 1, result));
 };
-
-const s1 = "42";
-const s2 = "      -42";
-const s3 = "4193 with words";
-const s4 = "words and 987";
-const s5 = "-91283472332";
-const s6 = "3.14159";
-
-console.log(myAtoi(s6));
