@@ -1,0 +1,3 @@
+const myAtoi = function (string) {
+
+};
