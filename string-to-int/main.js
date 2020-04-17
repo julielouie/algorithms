@@ -12,8 +12,9 @@ const myAtoi = function (string) {
     }
   }
   let isValid = ((+newStr) | 0) == newStr;
-  console.log(isValid);
-  console.log('number: ', newStr)
+  if (isValid) return parseInt(newStr);
+  else if (newStr[0] === '-') return -2147483648;
+  else return 2147483648;
 };
 
 const s1 = "42";
