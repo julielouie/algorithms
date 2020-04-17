@@ -1,20 +1,32 @@
 const myAtoi = function (string) {
-  let trimmed = string.trim();
-  let newStr = '';
-  for (let index = 0; index < trimmed.length; index++) {
-    let currentIndexNum = +(trimmed[index]);
-    if (typeof currentIndexNum === 'number' && !Number.isNaN(currentIndexNum) && trimmed[index] !== ' ') {
-      newStr += trimmed[index];
-    } else if (trimmed[index] === '-' && (typeof +(trimmed[index + 1])) === 'number') {
-      newStr += '-';
-    } else {
-      continue;
-    }
+  let index = 0;
+  let result = 0;
+  let isNegative = false;
+
+  while (string[index] === ' ') {
+    index++;
   }
-  let isValid = ((+newStr) | 0) == newStr;
-  if (isValid) return parseInt(newStr);
-  else if (newStr[0] === '-') return -2147483648;
-  else return 2147483648;
+
+  const sign = string[index];
+  if (sign === '+' || sign === '-') {
+    isNegative = sign === '-';
+    index++;
+  }
+
+  for (; index < string.length; index++) {
+    const code = string.charCodeAt(index) - 48;
+    if (code < 0 || code > 9) {
+      break;
+    }
+    result *= 10;
+    result += code;
+  }
+
+  if (isNegative) {
+    result = -result;
+  }
+
+  return Math.max(-(2 ** 31), Math.min(2 ** 31 - 1, result));
 };
 
 const s1 = "42";
@@ -22,5 +34,6 @@ const s2 = "      -42";
 const s3 = "4193 with words";
 const s4 = "words and 987";
 const s5 = "-91283472332";
+const s6 = "3.14159";
 
-console.log(myAtoi(s5));
+console.log(myAtoi(s6));
