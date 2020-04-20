@@ -1,7 +1,4 @@
 const searchInsert = function (nums, target) {
-  //debugger;
-  // const numsSet = new Set(nums);
-  // const hasTarget = numsSet.has(target);
   for (let index = 0; index < nums.length; index++) {
     let current = nums[index];
     if (current === target) return index;
