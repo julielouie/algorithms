@@ -10,8 +10,7 @@ function sudoku2(grid) {
   }
 
   for (let outerVert = 0; outerVert < grid.length; outerVert++) {
-    let vertIndex = 0;
-    let currentVertical = calculateVertical(outerVert, vertIndex++, 9);
+    let currentVertical = calculateVertical(outerVert, outerVert, 9);
     if (currentVertical) {
       continue;
     } else {
@@ -44,7 +43,7 @@ function sudoku2(grid) {
     let vertical = [];
 
     while (count > 0) {
-      vertical.push(grid[arrayToCalc++][vertIndex]);
+      vertical.push(grid[arrayToCalc][vertIndex]);
       count--;
     }
 
