@@ -35,19 +35,22 @@ function sudoku2(grid) {
         count++;
       }
     }
-
     let subgridNoDuplicates = [...new Set(arrayOf3)];
     const subgridVal = addArray(subgridNoDuplicates);
     const arrayOf3Val = addArray(arrayOf3);
     if (arrayOf3Val !== subgridVal) return false;
 
     subgrid = 9;
-    subgridCount += 3;
-    count = subgridCount;
+    subgridCount++;
+    count++;
     if (subgridCount < 3) {
       outerFor3 = 0;
+    } else if (subgridCount === 3) {
+      count = 0;
     } else if (subgridCount < 6) {
       outerFor3 = 3;
+    } else if (subgridCount === 6) {
+      count = 0;
     } else if (subgridCount < 9) {
       outerFor3 = 6;
     } else {
@@ -139,4 +142,16 @@ const grid4 = [
   [".", ".", ".", "8", ".", ".", ".", ".", "."]
 ];
 
-console.log(sudoku2(grid4));
+const grid5 = [
+  [".", ".", ".", ".", ".", ".", "5", ".", "."],
+  [".", ".", ".", ".", ".", ".", ".", ".", "."],
+  [".", ".", ".", ".", ".", ".", ".", ".", "."],
+  ["9", "3", ".", ".", "2", ".", "4", ".", "."],
+  [".", ".", "7", ".", ".", ".", "3", ".", "."],
+  [".", ".", ".", ".", ".", ".", ".", ".", "."],
+  [".", ".", ".", "3", "4", ".", ".", ".", "."],
+  [".", ".", ".", ".", ".", "3", ".", ".", "."],
+  [".", ".", ".", ".", ".", "5", "2", ".", "."]
+];
+
+console.log(sudoku2(grid1));
