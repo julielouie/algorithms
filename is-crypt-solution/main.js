@@ -29,22 +29,3 @@ function isCryptSolution(crypt, solution) {
 
   return false;
 }
-
-const crypt1 = ["SEND", "MORE", "MONEY"];
-const solution1 = [
-  ['O', '0'],
-  ['M', '1'],
-  ['Y', '2'],
-  ['E', '5'],
-  ['N', '6'],
-  ['D', '7'],
-  ['R', '8'],
-  ['S', '9']
-];
-
-const crypt2 = ["A", "A", "A"];
-const solution2 = [
-  ['A', '0']
-];
-
-console.log(isCryptSolution(crypt2, solution2));
