@@ -15,21 +15,18 @@ function isCryptSolution(crypt, solution) {
     currentWord = '';
   }
 
-  if (newCrypt[0] !== '0' && newCrypt[0][0] === '0' || newCrypt[1] !== '0' && newCrypt[1][0] === '0') {
+  let first = newCrypt[0];
+  let second = newCrypt[1];
+  let result;
+
+  if (first !== '0' && first[0] === '0' || second !== '0' && second[0] === '0') {
     return false;
   } else {
-    const result = +(newCrypt[0]) + +(newCrypt[1]);
-    if (result || result == 0) return true;
+    result = +(first) + +(second);
+    if (result === parseInt(newCrypt[2])) return true;
   }
-  //index through each string in crypt
-  //in each string, index through each character
-  //check if solution object has this character as a property
-  //replace if yes, return false if not
-  //check for leading 0's once all characters have been replaced
-  //change strings to numbers
-  //do the math
-  //return true or false
 
+  return false;
 }
 
 const crypt1 = ["SEND", "MORE", "MONEY"];
