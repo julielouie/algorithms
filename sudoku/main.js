@@ -35,10 +35,7 @@ function sudoku2(grid) {
         count++;
       }
     }
-    let subgridNoDuplicates = [...new Set(arrayOf3)];
-    const subgridVal = addArray(subgridNoDuplicates);
-    const arrayOf3Val = addArray(arrayOf3);
-    if (arrayOf3Val !== subgridVal) return false;
+    if (!checkArray(arrayOf3)) return false;
 
     subgrid = 9;
     subgridCount++;
