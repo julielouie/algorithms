@@ -11,7 +11,7 @@ function sudoku2(grid) {
   }
 
   for (let outerVert = 0; outerVert < length; outerVert++) {
-    let currentVertical = calculateVertical(outerVert, outerVert, 9);
+    let currentVertical = calculateVertical(outerVert, 9);
     if (currentVertical) {
       continue;
     } else {
@@ -20,32 +20,40 @@ function sudoku2(grid) {
   }
 
   let subgridCount = 0;
+  let subgrid = 9;
+  let count = 0;
   for (let outerFor3 = 0; outerFor3 < length;) {
-    let expected = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    expected = addArray(expected);
+    const expected = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const expectedVal = addArray(expected);
 
     let arrayOf3 = [];
-    let subgrid = 9;
-    let count = 0;
 
     while (subgrid > 0) {
       arrayOf3.push(grid[outerFor3][count]);
       subgrid--;
       outerFor3++;
-      count++;
       if (subgrid === 6 || subgrid === 3) {
-        outerFor3 = 0;
-        count = 0;
+        outerFor3 -= 3;
+        count++;
       }
     }
 
     arrayOf3 = [...new Set(arrayOf3)];
-    arrayOf3 = addArray(arrayOf3);
-    if (arrayOf3 !== expected) return false;
+    const arrayOf3Val = addArray(arrayOf3);
+    if (arrayOf3.length === expected.length && arrayOf3Val !== expectedVal) return false;
 
     subgrid = 9;
     subgridCount += 3;
-    outerFor3 = subgridCount;
+    count = subgridCount;
+    if (subgridCount < 3) {
+      outerFor3 = 0;
+    } else if (subgridCount < 6) {
+      outerFor3 = 3;
+    } else if (subgridCount < 9) {
+      outerFor3 = 6;
+    } else {
+      outerFor3 = subgridCount;
+    }
   }
 
   function addArray(arrayToAdd) {
@@ -69,11 +77,12 @@ function sudoku2(grid) {
     else return true;
   }
 
-  function calculateVertical(arrayToCalc, vertIndex, count) {
+  function calculateVertical(vertIndex, count) {
+    let currentArray = 0;
     let vertical = [];
 
     while (count > 0) {
-      vertical.push(grid[arrayToCalc][vertIndex]);
+      vertical.push(grid[currentArray++][vertIndex]);
       count--;
     }
 
@@ -84,27 +93,39 @@ function sudoku2(grid) {
 }
 
 const grid1 = [
-  ['.', '.', '.', '1', '4', '.', '.', '2', '.'],
-  ['.', '.', '6', '.', '.', '.', '.', '.', '.'],
-  ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
-  ['.', '.', '1', '.', '.', '.', '.', '.', '.'],
-  ['.', '6', '7', '.', '.', '.', '.', '.', '9'],
-  ['.', '.', '.', '.', '.', '.', '8', '1', '.'],
-  ['.', '3', '.', '.', '.', '.', '.', '.', '6'],
-  ['.', '.', '.', '.', '.', '7', '.', '.', '.'],
-  ['.', '.', '.', '5', '.', '.', '.', '7', '.']
+    ['.', '.', '.', '1', '4', '.', '.', '2', '.'],
+    ['.', '.', '6', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '1', '.', '.', '.', '.', '.', '.'],
+    ['.', '6', '7', '.', '.', '.', '.', '.', '9'],
+    ['.', '.', '.', '.', '.', '.', '8', '1', '.'],
+    ['.', '3', '.', '.', '.', '.', '.', '.', '6'],
+    ['.', '.', '.', '.', '.', '7', '.', '.', '.'],
+    ['.', '.', '.', '5', '.', '.', '.', '7', '.']
   ];
 
 const grid2 = [
-  ['.', '.', '.', '.', '2', '.', '.', '9', '.'],
-  ['.', '.', '.', '.', '6', '.', '.', '.', '.'],
-  ['7', '1', '.', '.', '7', '5', '.', '.', '.'],
-  ['.', '7', '.', '.', '.', '.', '.', '.', '.'],
-  ['.', '.', '.', '.', '8', '3', '.', '.', '.'],
-  ['.', '.', '8', '.', '.', '7', '.', '6', '.'],
-  ['.', '.', '.', '.', '.', '2', '.', '.', '.'],
-  ['.', '1', '.', '2', '.', '.', '.', '.', '.'],
-  ['.', '2', '.', '.', '3', '.', '.', '.', '.']
+    ['.', '.', '.', '.', '2', '.', '.', '9', '.'],
+    ['.', '.', '.', '.', '6', '.', '.', '.', '.'],
+    ['7', '1', '.', '.', '7', '5', '.', '.', '.'],
+    ['.', '7', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '8', '3', '.', '.', '.'],
+    ['.', '.', '8', '.', '.', '7', '.', '6', '.'],
+    ['.', '.', '.', '.', '.', '2', '.', '.', '.'],
+    ['.', '1', '.', '2', '.', '.', '.', '.', '.'],
+    ['.', '2', '.', '.', '3', '.', '.', '.', '.']
   ];
 
-console.log(sudoku2(grid1));
+const grid3 = [
+  [".", ".", ".", ".", ".", ".", ".", ".", "2"],
+  [".", ".", ".", ".", ".", ".", "6", ".", "."],
+  [".", ".", "1", "4", ".", ".", "8", ".", "."],
+  [".", ".", ".", ".", ".", ".", ".", ".", "."],
+  [".", ".", ".", ".", ".", ".", ".", ".", "."],
+  [".", ".", ".", ".", "3", ".", ".", ".", "."],
+  ["5", ".", "8", "6", ".", ".", ".", ".", "."],
+  [".", "9", ".", ".", ".", ".", "4", ".", "."],
+  [".", ".", ".", ".", "5", ".", ".", ".", "."]
+];
+
+console.log(sudoku2(grid2));
