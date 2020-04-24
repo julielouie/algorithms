@@ -1,4 +1,5 @@
 function sudoku2(grid) {
+
   for (let outer = 0; outer < grid.length; outer++) {
     const currentHorizontal = grid[outer];
     if (checkArray(currentHorizontal)) {
@@ -11,23 +12,26 @@ function sudoku2(grid) {
   for (let outerVert = 0; outerVert < grid.length; outerVert++) {
     let vertIndex = 0;
     let currentVertical = calculateVertical(outerVert, vertIndex++, 9);
-    if (checkArray(currentVertical)) {
+    if (currentVertical) {
       continue;
     } else {
       return false;
     }
   }
 
-  const addArray = (arrayToAdd) => {
+  function addArray(arrayToAdd) {
     const added = arrayToAdd.reduce((acc, curr) => {
-      if (curr !== '.') {
-        return acc + curr;
+      let current = +curr;
+      if (!isNaN(current)) {
+        return acc + (current);
+      } else {
+        return acc;
       }
     }, 0);
     return added;
   }
 
-  const checkArray = (arrayToCheck) => {
+  function checkArray(arrayToCheck) {
     const noDuplicates = [...new Set(arrayToCheck)];
 
     const currentArray = addArray(arrayToCheck);
@@ -36,7 +40,7 @@ function sudoku2(grid) {
     else return true;
   }
 
-  const calculateVertical = (arrayToCalc, vertIndex, count) => {
+  function calculateVertical(arrayToCalc, vertIndex, count) {
     let vertical = [];
 
     while (count > 0) {
@@ -46,6 +50,8 @@ function sudoku2(grid) {
 
     return checkArray(vertical);
   }
+
+  return true;
 }
 
 const grid1 = [
@@ -72,4 +78,4 @@ const grid2 = [
   ['.', '2', '.', '.', '3', '.', '.', '.', '.']
   ];
 
-// console.log(sudoku2(grid1));
+console.log(sudoku2(grid1));
