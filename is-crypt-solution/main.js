@@ -17,13 +17,14 @@ function isCryptSolution(crypt, solution) {
 
   let first = newCrypt[0];
   let second = newCrypt[1];
+  let final = newCrypt[2];
   let result;
 
   if (first !== '0' && first[0] === '0' || second !== '0' && second[0] === '0') {
     return false;
   } else {
     result = +(first) + +(second);
-    if (result === parseInt(newCrypt[2])) return true;
+    if (final === '0' || final[0] !== '0' && result === parseInt(final)) return true;
   }
 
   return false;
@@ -41,13 +42,9 @@ const solution1 = [
   ['S', '9']
 ];
 
-const crypt2 = ["TEN", "TWO", "ONE"];
+const crypt2 = ["A", "A", "A"];
 const solution2 = [
-  ['O', '1'],
-  ['T', '0'],
-  ['W', '9'],
-  ['E', '5'],
-  ['N', '4']
+  ['A', '0']
 ];
 
 console.log(isCryptSolution(crypt2, solution2));
