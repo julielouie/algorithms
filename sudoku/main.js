@@ -1,6 +1,7 @@
 function sudoku2(grid) {
+  const length = grid.length;
 
-  for (let outer = 0; outer < grid.length; outer++) {
+  for (let outer = 0; outer < length; outer++) {
     const currentHorizontal = grid[outer];
     if (checkArray(currentHorizontal)) {
       continue;
@@ -9,13 +10,42 @@ function sudoku2(grid) {
     }
   }
 
-  for (let outerVert = 0; outerVert < grid.length; outerVert++) {
+  for (let outerVert = 0; outerVert < length; outerVert++) {
     let currentVertical = calculateVertical(outerVert, outerVert, 9);
     if (currentVertical) {
       continue;
     } else {
       return false;
     }
+  }
+
+  let subgridCount = 0;
+  for (let outerFor3 = 0; outerFor3 < length;) {
+    let expected = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    expected = addArray(expected);
+
+    let arrayOf3 = [];
+    let subgrid = 9;
+    let count = 0;
+
+    while (subgrid > 0) {
+      arrayOf3.push(grid[outerFor3][count]);
+      subgrid--;
+      outerFor3++;
+      count++;
+      if (subgrid === 6 || subgrid === 3) {
+        outerFor3 = 0;
+        count = 0;
+      }
+    }
+
+    arrayOf3 = [...new Set(arrayOf3)];
+    arrayOf3 = addArray(arrayOf3);
+    if (arrayOf3 !== expected) return false;
+
+    subgrid = 9;
+    subgridCount += 3;
+    outerFor3 = subgridCount;
   }
 
   function addArray(arrayToAdd) {
