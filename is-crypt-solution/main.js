@@ -15,7 +15,12 @@ function isCryptSolution(crypt, solution) {
     currentWord = '';
   }
 
-  console.log(newCrypt)
+  if (newCrypt[0] !== '0' && newCrypt[0][0] === '0' || newCrypt[1] !== '0' && newCrypt[1][0] === '0') {
+    return false;
+  } else {
+    const result = +(newCrypt[0]) + +(newCrypt[1]);
+    if (result || result == 0) return true;
+  }
   //index through each string in crypt
   //in each string, index through each character
   //check if solution object has this character as a property
@@ -48,4 +53,4 @@ const solution2 = [
   ['N', '4']
 ];
 
-console.log(isCryptSolution(crypt1, solution1));
+console.log(isCryptSolution(crypt2, solution2));
