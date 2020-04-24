@@ -1,9 +1,21 @@
 function isCryptSolution(crypt, solution) {
-  //convert solution array into object
   const solutionsObj = {};
+  const newCrypt = [];
+  let currentWord = '';
   solution.forEach(element => solutionsObj[element[0]] = element[1]);
+  for (let index = 0; index < crypt.length; index++) {
+    let word = crypt[index];
+    for (let innerIndex = 0; innerIndex < word.length; innerIndex++) {
+      // eslint-disable-next-line no-prototype-builtins
+      if (solutionsObj.hasOwnProperty(word[innerIndex])) {
+        currentWord += solutionsObj[word[innerIndex]];
+      }
+    }
+    newCrypt.push(currentWord);
+    currentWord = '';
+  }
 
-
+  console.log(newCrypt)
   //index through each string in crypt
   //in each string, index through each character
   //check if solution object has this character as a property
