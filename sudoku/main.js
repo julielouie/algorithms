@@ -58,6 +58,12 @@ function sudoku2(grid) {
     }
   }
 
+  return true;
+
+
+
+
+
   function addArray(arrayToAdd) {
     const added = arrayToAdd.reduce((acc, curr) => {
       let current = +curr;
@@ -90,8 +96,6 @@ function sudoku2(grid) {
 
     return checkArray(vertical);
   }
-
-  return true;
 }
 
 const grid1 = [
