@@ -1,8 +1,21 @@
 function sudoku2(grid) {
   for (let outermost = 0; outermost < grid.length; outermost++) {
-    const set = [...new Set(grid[outermost])];
-    console.log(set)
+    const current = grid[outermost];
+    const noDuplicates = [...new Set(current)];
 
+    const currentArray = addArray(current);
+    const currentSet = addArray(noDuplicates);
+    if (currentArray !== currentSet) return false;
+
+  }
+
+  const addArray = (arrayToAdd) => {
+    const added = arrayToAdd.reduce((acc, curr) => {
+      if (curr !== '.') {
+        return acc + curr;
+      }
+    }, 0);
+    return added;
   }
 }
 
