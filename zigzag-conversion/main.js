@@ -1,4 +1,5 @@
 const convert = function (str, numRows) {
+  if (numRows < 2) return str;
   const result = Array(numRows).fill('');
   let row = 0;
   let zigzag = true;
