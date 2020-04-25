@@ -1,5 +1,6 @@
 const convert = function (s, numRows) {
-
+  let result = Array(numRows).fill('');
+  console.log(result);
 };
 
 const s1 = "PAYPALISHIRING";
