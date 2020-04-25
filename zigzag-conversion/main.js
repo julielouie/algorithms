@@ -12,11 +12,3 @@ const convert = function (str, numRows) {
   }
   return result.join('');
 };
-
-const s1 = "PAYPALISHIRING";
-const numRows1 = 3;
-
-const s2 = "PAYPALISHIRING";
-const numRows2 = 4;
-
-console.log(convert(s2, numRows2));
