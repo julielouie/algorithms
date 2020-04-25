@@ -9,8 +9,7 @@ const convert = function (str, numRows) {
       zigzag = !zigzag;
     }
   }
-
-  console.log(result);
+  return result.join('');
 };
 
 const s1 = "PAYPALISHIRING";
@@ -19,4 +18,4 @@ const numRows1 = 3;
 const s2 = "PAYPALISHIRING";
 const numRows2 = 4;
 
-console.log(convert(s1, numRows1));
+console.log(convert(s2, numRows2));
