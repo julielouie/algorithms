@@ -1,5 +1,15 @@
-const convert = function (s, numRows) {
-  let result = Array(numRows).fill('');
+const convert = function (str, numRows) {
+  const result = Array(numRows).fill('');
+  let row = 0;
+  let zigzag = false;
+  for (let index = 0; index < str.length; index++) {
+      result[row] += str[index];
+      row++;
+    if (row === numRows - 1 || row === 0) {
+      zigzag = !zigzag;
+    }
+  }
+
   console.log(result);
 };
 
