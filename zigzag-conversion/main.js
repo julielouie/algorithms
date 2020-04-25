@@ -1,10 +1,10 @@
 const convert = function (str, numRows) {
   const result = Array(numRows).fill('');
   let row = 0;
-  let zigzag = false;
+  let zigzag = true;
   for (let index = 0; index < str.length; index++) {
       result[row] += str[index];
-      row++;
+      zigzag ? row++ : row--;
     if (row === numRows - 1 || row === 0) {
       zigzag = !zigzag;
     }
