@@ -1,16 +1,16 @@
 const maxArea = function (height) {
   if (!height[0]) return 0;
   let areas = [];
-  const length = height.length;
-  for (let index = 0; index < length; index++) {
-    calcArea()
+  for (let index = 0; index < height.length; index++) {
+    calcArea(index);
   }
 
 
-  function calcArea(length) {
+  function calcArea(currentIndex) {
     let areaIndex = 0;
     while (areaIndex < height.length) {
-      const width = height[areaIndex];
+      const length = height[currentIndex];
+      const width = areaIndex - currentIndex;
       areas.push(length * width);
       areaIndex++;
     }
