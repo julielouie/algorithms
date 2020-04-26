@@ -1,5 +1,5 @@
 const maxArea = function (height) {
-  if (!height[0]) return 0;
+  if (height[0] === undefined) return 0;
   let areas = [];
   for (let index = 0; index < height.length; index++) {
     calcArea(index);
