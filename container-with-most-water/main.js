@@ -4,7 +4,10 @@ const maxArea = function (height) {
   for (let index = 0; index < height.length; index++) {
     calcArea(index);
   }
-
+  areas = areas.sort((a, b) => a - b);
+  if (areas[0]) return areas.length - 1;
+  console.log(areas)
+  return 0;
 
   function calcArea(currentIndex) {
     const currentLength = height[currentIndex];
