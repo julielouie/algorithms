@@ -1,15 +1,15 @@
 const maxArea = function (height) {
-  if (height[0] === undefined) return 0;
+  if (!height.length) return 0;
   let areas = [];
   for (let index = 0; index < height.length; index++) {
     calcArea(index);
   }
   areas = areas.sort((a, b) => a - b);
-  if (areas[0]) return areas[areas.length - 1];
-  console.log(areas)
+  if (areas.length) return areas[areas.length - 1];
   return 0;
 
   function calcArea(currentIndex) {
+    let temp = 0;
     const currentLength = height[currentIndex];
     if (currentLength === 1) {
       areas.push(height.length - 1);
@@ -23,11 +23,13 @@ const maxArea = function (height) {
       const otherLength = height[areaIndex];
       const length = Math.min(currentLength, otherLength);
       const width = Math.abs(areaIndex - currentIndex);
-      if (length && width) {
-        areas.push(length * width);
+      const area = length * width;
+      if (area && temp < area) {
+        temp = area;
       }
       areaIndex++;
     }
+    areas.push(temp);
   }
 };
 
