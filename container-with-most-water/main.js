@@ -5,14 +5,21 @@ const maxArea = function (height) {
     calcArea(index);
   }
   areas = areas.sort((a, b) => a - b);
-  if (areas[0]) return areas.length - 1;
+  if (areas[0]) return areas[areas.length - 1];
   console.log(areas)
   return 0;
 
   function calcArea(currentIndex) {
     const currentLength = height[currentIndex];
+    if (currentLength === 1) {
+      areas.push(height.length - 1);
+      return;
+    }
     let areaIndex = 0;
     while (areaIndex < height.length) {
+      if (areaIndex === currentIndex) {
+        areaIndex++;
+      }
       const otherLength = height[areaIndex];
       const length = Math.min(currentLength, otherLength);
       const width = Math.abs(areaIndex - currentIndex);
@@ -27,7 +34,7 @@ const maxArea = function (height) {
 const test1 = [1, 8, 6, 2, 5, 4, 8, 3, 7];
   // output: 49
 
-// console.log(maxArea(test1));
+console.log(maxArea(test1));
 
 
 
