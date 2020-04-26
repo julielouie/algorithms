@@ -7,11 +7,15 @@ const maxArea = function (height) {
 
 
   function calcArea(currentIndex) {
+    const currentLength = height[currentIndex];
     let areaIndex = 0;
     while (areaIndex < height.length) {
-      const length = height[currentIndex];
-      const width = areaIndex - currentIndex;
-      areas.push(length * width);
+      const otherLength = height[areaIndex];
+      const length = Math.min(currentLength, otherLength);
+      const width = Math.abs(areaIndex - currentIndex);
+      if (length && width) {
+        areas.push(length * width);
+      }
       areaIndex++;
     }
   }
