@@ -1,5 +1,9 @@
 function checkAnagram() {
 
+  function alphabetize(word) {
+    if (!word) return;
+    return word.split('').sort().join('');
+  }
 }
 
 const word1 = "silent";
