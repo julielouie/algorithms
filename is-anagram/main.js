@@ -3,10 +3,10 @@ function checkAnagram(...args) {
   for (const word of args) {
     const sorted = alphabetize(word);
     if (!words[0]) words.push(sorted);
-    if (words[0] === sorted) return;
+    if (words[0] === sorted) continue;
     else return false;
   }
-  return (words.length > 1) ? false : true;
+  return true;
 
   function alphabetize(word) {
     if (!word) return;
