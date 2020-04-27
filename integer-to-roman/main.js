@@ -13,4 +13,4 @@ const num3 = 9;
 const num4 = 58;
 const num5 = 1996;
 
-console.log(intToRoman(num2));
+console.log(intToRoman(num5));
