@@ -13,10 +13,3 @@ function checkAnagram(...args) {
     return word.split('').sort().join('');
   }
 }
-
-const word1 = "silent";
-const word2 = "listen";
-const word3 = "yes";
-const word4 = "no";
-
-console.log(checkAnagram(word3, word4));
