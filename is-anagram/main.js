@@ -1,4 +1,11 @@
 function checkAnagram() {
+  const words = [];
+  args.forEach(word => {
+    const sorted = alphabetize(word);
+    if (!words[0]) words.push(sorted);
+    if (words[0] === sorted) return;
+  });
+  return (words.length > 1) ? false : true;
 
   function alphabetize(word) {
     if (!word) return;
