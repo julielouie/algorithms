@@ -1,4 +1,4 @@
-function checkAnagram() {
+function checkAnagram(...args) {
   const words = [];
   args.forEach(word => {
     const sorted = alphabetize(word);
