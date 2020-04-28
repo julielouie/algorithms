@@ -10,6 +10,6 @@ function checkAnagram(...args) {
 
   function alphabetize(word) {
     if (!word) return;
-    return word.split('').sort().join('');
+    return word.toLowerCase().split('').sort().join('');
   }
 }
