@@ -9,11 +9,3 @@ function calcTaxCents(dollars, percent) {
   percent = percent * 0.01;
   return `${((dollars * percent) / 0.01).toFixed()} cents`;
 }
-
-const dollars1 = 900.50;
-const percent1 = 20;
-
-const dollars2 = 720.46;
-const percent2 = 15;
-
-console.log(calcTaxCents(dollars1, percent1));
