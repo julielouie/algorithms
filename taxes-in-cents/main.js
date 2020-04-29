@@ -7,7 +7,7 @@ function calcTaxCents(dollars, percent) {
     percent = +percent;
   }
   percent = percent * 0.01;
-  return ((dollars * percent) / 0.01).toFixed(0);
+  return ((dollars * percent) / 0.01).toFixed();
 }
 
 const dollars1 = 900.50;
