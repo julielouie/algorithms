@@ -6,8 +6,8 @@ function calcTaxCents(dollars, percent) {
     dollars = +dollars;
     percent = +percent;
   }
-
-
+  percent = percent * 0.01;
+  return ((dollars * percent) / 0.01).toFixed(0);
 }
 
 const dollars1 = 900.50;
@@ -16,5 +16,4 @@ const percent1 = 20;
 const dollars2 = 720.46;
 const percent2 = 15;
 
-console.log(calcTaxCents('900', '20'))
-// console.log(calcTaxCents(dollars1, percent1));
+console.log(calcTaxCents(dollars1, percent1));
