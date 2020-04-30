@@ -3,7 +3,7 @@ function convToInt(largeNum1, largeNum2) {
 }
 
 function addTwo(strNum1, strNum2) {
-  let result = "";
+  let result = '';
   let length1 = strNum1.length;
   let length2 = strNum2.length;
 
@@ -36,10 +36,10 @@ function addTwo(strNum1, strNum2) {
   return result;
 }
 
-console.log('firstFunction: ', convToInt('98265812335', '98789878998'));
-  // Expected output: 197055691333
-  // Output:
+console.log('firstFunction: ', convToInt('9826581789872335', '9878978987878998'));
+  // Expected output: 19705560777751333
+  // Actual output: 19705560777751333
 
 console.log('secondFunction: ', addTwo('985847898795789578', '785456945678912385632'));
-  // Expected output: 795315464210
-  // Output:
+  // Expected output: 786442793577708175210
+  // Actual output: 786442793577708175210
