@@ -1,5 +1,9 @@
 function secure(cardNums) {
-  const numsRegEx = RegExp(/^[0-9]*$/g);
+  let result = '';
+
+  cardNums = cardNums.replace(/-|\s/g, '');
+  const numsOnly = (/^[0-9]*$/g).test(cardNums);
+  if (!numsOnly) return false;
 }
 
 const card1 = '1234567891234567';
@@ -13,3 +17,5 @@ const card3 = '9780-2381-4927-4590';
 
 const invalid = '1234 sdfh 4848 wert';
  // Output: ************4590
+
+console.log(secure(invalid));
