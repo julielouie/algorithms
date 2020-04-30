@@ -8,12 +8,12 @@ Add the two together and return the sum.
 
 ### Example 1:
 ```shell
-Input: word1 = "silent", word2 = "listen"
+Input: num1 = '9826581412335', num2 = '98789878998'
 Output: true
 ```
 
 ### Example 2:
 ```shell
-Input: word1 = "yes", word2 = "no"
+Input: num1 = '985698478578', num2 = '785456985632145'
 Output: false
 ```

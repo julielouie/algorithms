@@ -36,6 +36,10 @@ function addTwo(strNum1, strNum2) {
   return result;
 }
 
-console.log('firstFunction: ', convToInt('9826581412335', '98789878998'));
+console.log('firstFunction: ', convToInt('98265812335', '98789878998'));
+  // Expected output: 98265812335
+  // Output:
 
-console.log('secondFunction: ', addTwo('9826581412335', '98789878998'));
+console.log('secondFunction: ', addTwo('985698478578', '785456985632145'));
+  // Expected output:
+  // Output:
