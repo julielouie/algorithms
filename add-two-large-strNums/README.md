@@ -8,12 +8,12 @@ Add the two together and return the sum.
 
 ### Example 1:
 ```shell
-Input: num1 = '9826581412335', num2 = '98789878998'
-Output: true
+Input: num1 = '98265812335', num2 = '98789878998'
+Output: '197055691333'
 ```
 
 ### Example 2:
 ```shell
-Input: num1 = '985698478578', num2 = '785456985632145'
-Output: false
+Input: num1 = '9858478578', num2 = '785456985632'
+Output: 795315464210
 ```
