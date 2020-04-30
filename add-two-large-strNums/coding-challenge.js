@@ -37,9 +37,9 @@ function addTwo(strNum1, strNum2) {
 }
 
 console.log('firstFunction: ', convToInt('98265812335', '98789878998'));
-  // Expected output: 98265812335
+  // Expected output: 197055691333
   // Output:
 
-console.log('secondFunction: ', addTwo('985698478578', '785456985632145'));
-  // Expected output:
+console.log('secondFunction: ', addTwo('9858478578', '785456985632'));
+  // Expected output: 795315464210
   // Output:
