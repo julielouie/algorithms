@@ -40,6 +40,6 @@ console.log('firstFunction: ', convToInt('98265812335', '98789878998'));
   // Expected output: 197055691333
   // Output:
 
-console.log('secondFunction: ', addTwo('9858478578', '785456985632'));
+console.log('secondFunction: ', addTwo('985847898795789578', '785456945678912385632'));
   // Expected output: 795315464210
   // Output:
