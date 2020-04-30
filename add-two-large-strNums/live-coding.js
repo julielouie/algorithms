@@ -1,7 +1,9 @@
+  // Function Version 1: Simple
 function convToInt(largeNum1, largeNum2) {
   return (BigInt(largeNum1) + BigInt(largeNum2)).toString();
 }
 
+  // Function Version 2: Broken Down
 function addTwo(strNum1, strNum2) {
   let result = '';
   let length1 = strNum1.length;
