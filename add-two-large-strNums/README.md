@@ -2,9 +2,9 @@
 
 Coding challenge provided during interview for Frontend Engineer position:
 
-Please create a function that takes in two strings.
-Assume that each string is a very large number.
-Add the two together and return the sum.
+- Please create a function that takes in two strings.
+- Assume that each string is a very large number.
+- Add the two together and return the sum.
 
 ### Example 1:
 ```shell
