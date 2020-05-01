@@ -3,7 +3,9 @@ function sortInitials(initials) {
   const map = {};
   let newName = '';
   for (let index = 0; index < initials.length; index++) {
-    if (!map.hasOwnProperty(initials[index])) {
+    if (map.hasOwnProperty(initials[index])) {
+      map[(initials[index]).toUpperCase()] = initials.charCodeAt(index);
+    } else {
       map[initials[index]] = initials.charCodeAt(index);
     }
   }
