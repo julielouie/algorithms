@@ -26,6 +26,6 @@ const initials1 = 'ibhsdj';
 const initials2 = 'posh';
  //Output: 'HOPS'
 
+const initials3 = 'aCbDfE'
 
-
-console.log(sortInitials(initials2));
+console.log(sortInitials(initials3));
