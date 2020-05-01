@@ -19,13 +19,3 @@ function sortInitials(initials) {
   }
   return newName;
 }
-
-const initials1 = 'ibhsdj';
- //Output: 'BDHIJS'
-
-const initials2 = 'posh';
- //Output: 'HOPS'
-
-const initials3 = 'aCbDfE'
-
-console.log(sortInitials(initials3));
