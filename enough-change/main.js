@@ -1,5 +1,12 @@
 function calcChange(total, change) {
-
+  console.log(change)
+  change[0] *= 0.01;
+  change[1] *= 0.05;
+  change[2] *= 0.10;
+  change[3] *= 0.25;
+  const totalChange = change.reduce((acc, curr) => {
+    return acc + (+curr);
+  }, 0)
 }
 
 const total1 = 34.51;
