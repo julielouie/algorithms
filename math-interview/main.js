@@ -14,10 +14,10 @@ function calcNums(num1, num2, op) {
 
 }
 
-const num1 = 2;
-const num2 = 8;
-const op = '+';
- // Output: 10
+// const num1 = 2;
+// const num2 = 8;
+// const op = '+';
+//  // Output: 10
 
 // const num1 = 20;
 // const num2 = 5;
@@ -42,6 +42,6 @@ const op = '+';
 // const num1 = 5;
 // const num2 = 0;
 // const op = '/';
- // Output: 'Cannot divide a number by 0!'
+//  'Cannot divide a number by 0!'
 
 console.log(calcNums(num1, num2, op));
