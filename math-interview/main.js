@@ -29,6 +29,11 @@ const op = '+';
 // const op = '*';
 //  // Output: 28
 
+// const num1 = 2;
+// const num2 = 14;
+// const op = 'x';
+//  // Output: 28
+
 // const num1 = 36;
 // const num2 = 6;
 // const op = '/';
@@ -38,3 +43,5 @@ const op = '+';
 // const num2 = 0;
 // const op = '/';
  // Output: 'Cannot divide a number by 0!'
+
+console.log(calcNums(num1, num2, op));
