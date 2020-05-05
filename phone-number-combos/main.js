@@ -2,7 +2,7 @@ var letterCombinations = function (digits) {
   digits = digits.split('');
   const chars = [];
   for (let index = 0; index < digits.length; index++) {
-    switch (digits[index]) {
+    switch (parseInt(digits[index])) {
       case 2:
         chars.push('abc');
         break;
@@ -29,6 +29,7 @@ var letterCombinations = function (digits) {
         break;
     }
   }
+  console.log(chars)
 
 };
 
