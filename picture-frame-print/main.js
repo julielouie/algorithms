@@ -1,5 +1,5 @@
 function printFrame(width, height, character) {
-  if (width < 3 || height < 3) return 'Please provide larger dimensions!';
+  if (width < 4 || height < 4) return 'Please provide larger dimensions!';
 
   const frame = [];
 
