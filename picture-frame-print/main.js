@@ -3,10 +3,9 @@ function printFrame(width, height, character) {
 
   const frame = [];
 
-
   function createOuter(num, str) {
     let outerBracket = '';
-    for (let index = 0; index < num; index++) {
+    for (let outerIndex = 0; outerIndex < num; outerIndex++) {
       outerBracket += str;
     }
     return [outerBracket];
@@ -14,8 +13,8 @@ function printFrame(width, height, character) {
 
   function createInner(num, str) {
     let innerBracket = '';
-    for (let index = 0; index < num; index++) {
-      if (index === 0 || index === num - 1) {
+    for (let innerIndex = 0; innerIndex < num; innerIndex++) {
+      if (innerIndex === 0 || innerIndex === num - 1) {
         innerBracket += str;
       } else {
         innerBracket += ' ';
@@ -24,6 +23,15 @@ function printFrame(width, height, character) {
     return [innerBracket];
   }
 
+  for (let vertIndex = 0; vertIndex < height; vertIndex++) {
+    if (vertIndex === 0 || vertIndex === height - 1) {
+      frame.push(createOuter(width, character));
+    } else {
+      frame.push(createInner(width, character));
+    }
+  }
+
+  return frame;
 }
 
 const width = 10;
