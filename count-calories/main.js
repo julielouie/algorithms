@@ -1,4 +1,14 @@
 function countSuccessDays(calories, exHours) {
+  const record = [];
+  let successes = 0;
+  let cal = calories[0];
+  let hour = exHours[0];
+  calories.forEach((day, index) => {
+    if (index === 0) return;
+    if (cal > day) record.push(1);
+    else record.push(0);
+    cal = day;
+  });
 
 
 }
