@@ -1,11 +1,9 @@
 function rearrangeStr(sentence) {
-  const strArr = sentence.slice(0, sentence.length - 1).toLowerCase().split(' ');
-  strArr.sort((a, b) => {
-    let first = a.length;
-    let second = b.length;
-    return first - second;
-  });
-  return strArr
+  const strArr = sentence.slice(0, sentence.length - 1).split(' ');
+  strArr[0].toLowerCase();
+  strArr.sort((a, b) => a.length - b.length);
+  strArr[0] = strArr[0].toUpperCase()
+  return strArr.join(' ') + '.';
 }
 
 // const sentence = 'The lines are printed in reverse order.';
