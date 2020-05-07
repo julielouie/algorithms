@@ -1,9 +1,10 @@
 function rearrangeStr(sentence) {
-  const strArr = sentence.slice(0, sentence.length - 1).split(' ');
-  strArr[0].toLowerCase();
+  const strArr = sentence.slice(0, sentence.length - 1).toLowerCase().split(' ');
   strArr.sort((a, b) => a.length - b.length);
-  strArr[0] = strArr[0].toUpperCase()
-  return strArr.join(' ') + '.';
+  strArr[0] = strArr[0].toUpperCase();
+  const regex = RegExp(/^[A-Z][a-z]*\.$/g);
+  const test = strArr.join('') + '.';
+  if (regex.test(test)) return strArr.join(' ') + '.';
 }
 
 // const sentence = 'The lines are printed in reverse order.';
