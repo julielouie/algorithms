@@ -1,15 +1,17 @@
 function calcPrintTime(chars) {
   const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-  let seconds = 0;
+  const length = alphabet.length;
+  let seconds = [];
   for (let index = 0; index < chars.length; index++) {
-    const letter = chars[index];
-    const alphIndex = alphabet.indexOf(letter);
-
-    console.log(alphIndex)
-
-
+    const current = chars[index];
+    let alphIndex = alphabet.indexOf(current);
+    if (alphIndex > (length / 2)) {
+      alphIndex = (length - alphIndex) * (-1);
+    }
+    seconds.push(alphIndex);
   }
-
+  seconds.sort((a, b) => a - b);
+  console.log(seconds)
 
 }
 
