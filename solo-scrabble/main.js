@@ -10,7 +10,6 @@ function scoreWords(words) {
     }
     wordVals[word] = points;
   });
-  console.log(wordVals)
   words.forEach(word => {
     if (wordVals[word] > wordVals[winners[0]]) {
       winners.splice(0, winners.length, word);
@@ -18,8 +17,13 @@ function scoreWords(words) {
       winners.push(word);
     }
   });
-  console.log(winners)
+  return winners;
 }
 
 const words = ['YOU', 'ARE', 'THE', 'APPLE', 'OF', 'MY', 'EYE'];
+
+// const words = ['WHO', 'IS', 'A', 'GOOD', 'GIRL'];
+
+// const words = ['I', 'NEED', 'HOT', 'SAUCE', 'IN', 'MY', 'SOUP'];
+
 console.log(scoreWords(words));
