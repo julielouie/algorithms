@@ -10,20 +10,24 @@ function scoreWords(words) {
     }
       wordVals[word] = points;
   });
-  words.forEach(word => {
+  words.forEach((word, index) => {
     if (wordVals[word] > wordVals[winners[0]]) {
       winners.splice(0, winners.length, word);
-    } else if (!winners.includes(word) && wordVals[word] === wordVals[winners[0]]) {
-      winners.push(word);
+    } else if (wordVals[word] === wordVals[winners[0]]) {
+      if (winners.includes(word) && index !== 0) {  // handles multiple of the same word
+        winners.push(word);
+      } else if (!winners.includes(word)) {
+        winners.push(word);
+      }
     }
   });
   return winners;
 }
 
-// const words = ['YOU', 'ARE', 'THE', 'APPLE', 'OF', 'MY', 'EYE'];
+// const words = ['YOU', 'ARE', 'THE', 'APPLE', 'APPLE', 'OF', 'MY', 'EYE'];
 
 // const words = ['WHO', 'IS', 'A', 'GOOD', 'GIRL'];
 
-const words = ['I', 'NEED', 'HOT', 'SAUCE', 'IN', 'MY', 'SOUP'];
+const words = ['SAUCE', 'I', 'NEED', 'SAUCE', 'HOT', 'SAUCE', 'IN', 'MY', 'SOUP'];
 
 console.log(scoreWords(words));
