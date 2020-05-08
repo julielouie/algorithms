@@ -11,16 +11,16 @@ function calcPrintTime(chars) {
     distances.push(Math.abs(alphIndex));
     alphabet = [...alphabet.slice(alphIndex), ...alphabet.slice(0, alphIndex)];
   }
-  return distances.reduce((acc, curr) => acc + curr, 0);
+  return `${distances.reduce((acc, curr) => acc + curr, 0)} seconds`;
 }
 
-const chars = 'BZA';
+// const chars = 'BZA';
   // 4 seconds
 
 // const chars = 'ZGB';
   // 13 seconds
 
-// const chars = 'YGSL';
+const chars = 'YGSL';
   // 29 seconds
 
 console.log(calcPrintTime(chars));
