@@ -1,6 +1,6 @@
 function scoreWords(words) {
   const map = { A: 1, B: 3, C: 3, D: 2, E: 1, F: 4, G: 2, H: 4, I: 1, J: 8, K: 5, L: 2, M: 3, N: 1, O: 1, P: 3, Q: 10, R: 1, S: 1, T: 1, U: 1, V: 4, W: 4, X: 8, Y: 4, Z: 10 };
-  const winners = [];
+  const winners = [words[0]];
   const wordVals = {};
   words.forEach(word => {
     let points = 0;
@@ -10,9 +10,12 @@ function scoreWords(words) {
     }
     wordVals[word] = points;
   });
+  console.log(wordVals)
   words.forEach(word => {
     if (wordVals[word] > wordVals[winners[0]]) {
-      winners.splice(0, word);
+      winners.splice(0, winners.length, word);
+    } else if (!winners.includes(word) && wordVals[word] === wordVals[winners[0]]) {
+      winners.push(word);
     }
   });
   console.log(winners)
