@@ -9,4 +9,8 @@ function scoreWords(words) {
     }
     wordVals[word] = points;
   });
+  console.log(wordVals);
 }
+
+const words = ['YOU', 'ARE', 'THE', 'APPLE', 'OF', 'MY', 'EYE'];
+console.log(scoreWords(words));
