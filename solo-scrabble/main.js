@@ -23,11 +23,3 @@ function scoreWords(words) {
   });
   return winners;
 }
-
-// const words = ['YOU', 'ARE', 'THE', 'APPLE', 'APPLE', 'OF', 'MY', 'EYE'];
-
-// const words = ['WHO', 'IS', 'A', 'GOOD', 'GIRL'];
-
-const words = ['SAUCE', 'I', 'NEED', 'SAUCE', 'HOT', 'SAUCE', 'IN', 'MY', 'SOUP'];
-
-console.log(scoreWords(words));
