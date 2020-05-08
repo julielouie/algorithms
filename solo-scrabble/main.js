@@ -10,7 +10,12 @@ function scoreWords(words) {
     }
     wordVals[word] = points;
   });
-  console.log(wordVals);
+  words.forEach(word => {
+    if (wordVals[word] > wordVals[winners[0]]) {
+      winners.splice(0, word);
+    }
+  });
+  console.log(winners)
 }
 
 const words = ['YOU', 'ARE', 'THE', 'APPLE', 'OF', 'MY', 'EYE'];
