@@ -1,5 +1,5 @@
 function calcPrintTime(chars) {
-  const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   const length = alphabet.length;
   let distances = [];
   for (let index = 0; index < chars.length; index++) {
@@ -9,10 +9,11 @@ function calcPrintTime(chars) {
       alphIndex = (length - alphIndex) * (-1);
     }
     distances.push(alphIndex);
+    alphabet = [...alphabet.slice(alphIndex), ...alphabet.slice(0, alphIndex)];
   }
   console.log(distances)
   let seconds = distances[0];
-  console.log(seconds)
+
 }
 
 const chars = 'BZA';
