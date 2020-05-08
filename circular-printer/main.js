@@ -8,12 +8,10 @@ function calcPrintTime(chars) {
     if (alphIndex > (length / 2)) {
       alphIndex = (length - alphIndex) * (-1);
     }
-    distances.push(alphIndex);
+    distances.push(Math.abs(alphIndex));
     alphabet = [...alphabet.slice(alphIndex), ...alphabet.slice(0, alphIndex)];
   }
-  console.log(distances)
-  let seconds = distances[0];
-
+  return distances.reduce((acc, curr) => acc + curr, 0);
 }
 
 const chars = 'BZA';
