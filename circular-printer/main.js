@@ -14,13 +14,13 @@ function calcPrintTime(chars) {
   return `${distances.reduce((acc, curr) => acc + curr, 0)} seconds`;
 }
 
-// const chars = 'BZA';
+const chars = 'BZA';
   // 4 seconds
 
 // const chars = 'ZGB';
   // 13 seconds
 
-const chars = 'YGSL';
+// const chars = 'YGSL';
   // 29 seconds
 
 console.log(calcPrintTime(chars));
