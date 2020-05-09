@@ -3,7 +3,8 @@ function isNumPalindrome(num) {
     return;
   } else {
     const numStr = `${num}`;
-    for (let index = 0, backInd = numStr.length - 1; index < numStr.length, backInd >= 0; index++, backInd--) {
+    const halfLength = numStr.length / 2;
+    for (let index = 0, backInd = numStr.length - 1; index < halfLength, backInd >= halfLength; index++, backInd--) {
       if (numStr[index] === numStr[backInd]) {
         continue;
       } else {
