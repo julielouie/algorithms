@@ -17,10 +17,10 @@ function isNumPalindrome(num) {
 
 // const num = 121;
 
-// const num = 199;
+const num = 199;
 
 // const num = 15;
 
-const num = 11;
+// const num = 11;
 
 console.log(isNumPalindrome(num));
