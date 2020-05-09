@@ -7,24 +7,21 @@ function isNumPalindrome(num) {
   let firstHalf = '';
   let backHalf = '';
   for (let index = 0, backInd = numStr.length - 1; index <= halfLength, backInd >= halfLength; index++, backInd--) {
-    if (numStr[index] === numStr[backInd]) {
-      continue;
-    } else {
-      firstHalf += numStr[index];
-      backHalf += numStr[backInd];
-      const lowerPal = firstHalf + firstHalf.split().reverse().join('');
-      const upperPal = backHalf + backHalf.split().reverse().join('');
-      if (parseInt(lowerPal) < num && parseInt(upperPal) > num) {
-        return lowerPal;
-      }
-    }
+    firstHalf += numStr[index];
+    backHalf += numStr[backInd];
   }
-  return num;
+  const lowerPal = firstHalf + firstHalf.split().reverse().join('');
+  const upperPal = backHalf + backHalf.split().reverse().join('');
+  if (parseInt(lowerPal) < num && parseInt(upperPal) > num) {
+    return lowerPal;
+  } else {
+    return num;
+  }
 }
 
-const num = 121;
+// const num = 121;
 
-// const num = 199;
+const num = 199;
 
 // const num = 15;
 
