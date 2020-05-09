@@ -4,8 +4,10 @@ function isNumPalindrome(num) {
   } else {
     const numStr = `${num}`;
     const halfLength = numStr.length / 2;
-    for (let index = 0, backInd = numStr.length - 1; index < halfLength, backInd >= halfLength; index++, backInd--) {
+    let firstHalf = '';
+    for (let index = 0, backInd = numStr.length - 1; index <= halfLength, backInd >= halfLength; index++, backInd--) {
       if (numStr[index] === numStr[backInd]) {
+        firstHalf += numStr[index];
         continue;
       } else {
 
