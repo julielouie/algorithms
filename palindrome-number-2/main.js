@@ -12,10 +12,10 @@ function isNumPalindrome(num) {
   }
   const lowerPal = firstHalf + firstHalf.split().reverse().join('');
   const upperPal = backHalf + backHalf.split().reverse().join('');
-  if (parseInt(lowerPal) < num && parseInt(upperPal) > num) {
-    return lowerPal;
-  } else {
+  if (numStr === lowerPal) {
     return num;
+  } else if (parseInt(lowerPal) < num && parseInt(upperPal) > num) {
+    return parseInt(lowerPal);
   }
 }
 
