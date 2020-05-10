@@ -1,16 +1,16 @@
-function fizzBuzzFuzz(num) {
+function fizzBuzzFuzz(index) {
   for (let index = 1; index < 151; index++) {
-    if (num % 105 === 0) {
+    if (index % 105 === 0) {
       return 'FizzBuzzFuzz';
-    } else if (num % 35 === 0) {
+    } else if (index % 35 === 0) {
       return 'BuzzFuzz';
-    } else if (num % 21 === 0) {
+    } else if (index % 21 === 0) {
       return 'FizzFuzz';
-    } else if (num % 7 === 0) {
+    } else if (index % 7 === 0) {
       return 'Fuzz';
-    } else if (num % 5 === 0) {
+    } else if (index % 5 === 0) {
       return 'Buzz';
-    } else if (num % 3 === 0) {
+    } else if (index % 3 === 0) {
       return 'Fizz';
     } else {
       return index;
