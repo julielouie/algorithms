@@ -18,4 +18,5 @@ function fizzBuzzFuzz(index) {
   }
 }
 
+
 console.log(fizzBuzzFuzz());
