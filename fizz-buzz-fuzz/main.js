@@ -18,4 +18,4 @@ function fizzBuzzFuzz(index) {
   }
 }
 
-console.log(fizzBuzzFuzz(num));
+console.log(fizzBuzzFuzz());
