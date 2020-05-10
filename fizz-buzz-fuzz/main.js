@@ -1,5 +1,7 @@
 function fizzBuzzFuzz(num) {
+  for (let index = 1; index < 151; index++) {
 
+  }
 }
 
 const num = 3;
