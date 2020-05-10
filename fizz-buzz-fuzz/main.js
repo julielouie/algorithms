@@ -3,7 +3,7 @@ function fizzBuzzFuzz(index) {
     console.log(
       (index % 3 ? '' : 'Fizz') +
       (index % 5 ? '' : 'Buzz') +
-      (index % 7 ? '' : 'Fuzz') +
+      (index % 7 ? '' : 'Fuzz')
       || index
       );
     // if (index % 105 === 0) {
