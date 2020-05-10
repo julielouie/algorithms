@@ -13,7 +13,7 @@ function fizzBuzzFuzz(num) {
     } else if (num % 3 === 0) {
       return 'Fizz';
     } else {
-      return num;
+      return index;
     }
   }
 }
