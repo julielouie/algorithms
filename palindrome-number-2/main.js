@@ -1,16 +1,11 @@
-function isNumPalindrome(num) {
-  if (num < 0) {
-    return;
-  } else {
-    const numStr = `${num}`;
-    const halfLength = numStr.length / 2;
-    for (let index = 0, backInd = numStr.length - 1; index < halfLength, backInd >= halfLength; index++, backInd--) {
-      if (numStr[index] === numStr[backInd]) {
-        continue;
-      } else {
-        return false;
-      }
-    }
+function nearestPalindrome(num) {
+  let i = num;
+  let j = num;
+  while (i != i.toString().split("").reverse().join("")) {
+    i++;
   }
-  return num;
+  while (j != j.toString().split("").reverse().join("")) {
+    j--;
+  }
+  return Math.abs(num - i) >= Math.abs(num - j) ? j : i;
 }
