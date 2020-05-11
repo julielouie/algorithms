@@ -8,7 +8,7 @@ function buildPyramid(X) {
   const charCount = 2 * (X - 1) + 1;
   const spCount = (base - charCount) / 2;
 
-  console.log(' '.repeat(spCount) + '#'.repeat(charCount));
+  console.log('#'.repeat(charCount));
 }
 
 // const num = 2;
