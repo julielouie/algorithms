@@ -2,13 +2,12 @@ function buildPyramid(X) {
   if (X < 1) return 'Please enter a positive number!';
   // buildPyramid(X - 1);
   // console.log('#'.repeat(X));
-  const base = 2 * (X - 1) + 1;
+  const baseCharCount = 2 * (X - 1) + 1;
   buildPyramid(X - 1);
 
-  const charCount = 2 * (X - 1) + 1;
-  const spCount = (base - charCount) / 2;
+  const spCount = (baseCharCount) / 2;
 
-  console.log('#'.repeat(charCount));
+  console.log('#'.repeat(baseCharCount));
 }
 
 // const num = 2;
