@@ -9,12 +9,4 @@ function buildPyramid(X) {
     char += 2;
     spaces -= 1;
   }
-
 }
-
-const num = 0;
-// const num = 2;
-// const num = 5;
-// const num = 10;
-
-console.log(buildPyramid(num));
