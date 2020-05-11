@@ -3,13 +3,12 @@ function buildPyramid(X) {
   // buildPyramid(X - 1);
   // console.log('#'.repeat(X));
   const base = 2 * (X - 1) + 1;
-  console.log(base)
   buildPyramid(X - 1);
 
-  const xCount = 2 * (X - 1) + 1;
-  const spCount = (base - xCount) / 2;
+  const charCount = 2 * (X - 1) + 1;
+  const spCount = (base - charCount) / 2;
 
-  return console.log(' '.repeat(spCount) + '#'.repeat(xCount));
+  console.log(' '.repeat(spCount) + '#'.repeat(charCount));
 }
 
 // const num = 2;
