@@ -7,4 +7,7 @@ class Queue {
     this.data.unshift(element);
   }
 
+  remove() {
+    this.data.pop();
+  }
 }
