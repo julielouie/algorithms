@@ -3,4 +3,8 @@ class Queue {
     this.data = [];
   }
 
+  add(element) {
+    this.data.unshift(element);
+  }
+
 }
