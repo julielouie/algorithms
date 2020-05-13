@@ -7,9 +7,7 @@ function isPalindrome(str) {
     index <= halfLen, halfLen >= backInd;
     index++, backInd--) {
     console.log(str[index], str[backInd]);
-    if (str[index] === str[backInd]) {
-      continue;
-    } else {
+    if (str[index] !== str[backInd]) {
       return false;
     }
   }
