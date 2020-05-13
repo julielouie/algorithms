@@ -10,12 +10,3 @@ function isPalindrome(str) {
   }
   return true;
 }
-
-const str = 'noon';
-// const str = 'Mom';
-// const str = 'Kayak';
-// const str = 'racecaR';
-// const str = 'Was it a cat I saw';
-// const str = 'Not a palindrome';
-
-console.log(isPalindrome(str));
