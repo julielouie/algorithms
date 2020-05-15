@@ -4,12 +4,15 @@ function makeArrayConsecutive2(statues) {
   let count = 0;
   let currentVal = sorted[0];
 
-  sorted.forEach(statue => {
-    if ((statue - currentVal) > 1) {
-      count += statue - currentVal;
-      currentVal = statue;
+  for (let index = 0; index < sorted.length; index++) {
+    const difference = sorted[index] - currentVal;
+    if (difference > 1) {
+      count++;
+      sorted.splice(index, 0, difference);
+      currentVal = sorted[index];
+      index--;
     }
-  });
+  }
 
   return count;
 }
