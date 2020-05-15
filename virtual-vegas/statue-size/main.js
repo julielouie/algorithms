@@ -5,7 +5,7 @@ function makeArrayConsecutive2(statues) {
   let currentVal = sorted[0];
 
   sorted.forEach(statue => {
-    if (currentVal < statue) {
+    if ((statue - currentVal) > 1) {
       count += statue - currentVal;
       currentVal = statue;
     }
