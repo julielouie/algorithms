@@ -7,11 +7,9 @@ function makeArrayConsecutive2(statues) {
   for (let index = 0; index < sorted.length; index++) {
     const difference = sorted[index] - currentVal;
     if (difference > 1) {
-      count++;
-      sorted.splice(index, 0, difference);
-      currentVal = sorted[index];
-      index--;
+      count += difference - 1;
     }
+    currentVal = sorted[index];
   }
 
   return count;
@@ -19,6 +17,6 @@ function makeArrayConsecutive2(statues) {
 
 const statues = [6, 2, 3, 8]; // 3
 // const statues = [1, 2, 4, 6]; // 2
-// const statues = [5, 8, 6, 3, 1, 4, 12]; // 6
+// const statues = [5, 8, 6, 3, 1, 4, 12]; // 5
 
 console.log(makeArrayConsecutive2(statues));
