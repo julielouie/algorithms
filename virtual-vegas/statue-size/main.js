@@ -4,6 +4,14 @@ function makeArrayConsecutive2(statues) {
   let count = 0;
   let currentVal = sorted[0];
 
+  sorted.forEach(statue => {
+    if (currentVal < statue) {
+      count += statue - currentVal;
+      currentVal = statue;
+    }
+  });
+
+  return count;
 }
 
 const statues = [6, 2, 3, 8]; // 3
