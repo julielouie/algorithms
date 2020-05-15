@@ -15,8 +15,8 @@ function makeArrayConsecutive2(statues) {
   return count;
 }
 
-const statues = [6, 2, 3, 8]; // 3
+// const statues = [6, 2, 3, 8]; // 3
 // const statues = [1, 2, 4, 6]; // 2
-// const statues = [5, 8, 6, 3, 1, 4, 12]; // 5
+const statues = [5, 8, 6, 3, 1, 4, 12]; // 5
 
 console.log(makeArrayConsecutive2(statues));
