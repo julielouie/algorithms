@@ -1,16 +1,19 @@
 function formatPhone(phoneNums) {
   const map = {
-    0: 'none',
-    1: 'none',
-    2: 'ABC',
-    3: 'DEF',
-    4: 'GHI',
-    5: 'JKL',
-    6: 'MNO',
-    7: 'PQRS',
-    8: 'TUV',
-    9: 'WXYZ'
+    ABC: 2,
+    DEF: 3,
+    GHI: 4,
+    JKL: 5,
+    MNO: 6,
+    PQRS: 7,
+    TUV: 8,
+    WXYZ: 9
   }
+  console.log(phoneNums)
+  const matchMap = match => match = map[match];
+  const newNums = phoneNums.replace(/([A-Z])/g, matchMap);
+  console.log(newNums)
+
 }
 
 const nums = '800-YOU-RANG';
