@@ -9,8 +9,11 @@ function formatPhone(phoneNums) {
     TUV: 8,
     WXYZ: 9
   }
-  console.log(phoneNums)
-  const matchMap = match => match = map[match];
+
+  const matchMap = match => {
+    console.log(match)
+    match = map[match]
+  };
   const newNums = phoneNums.replace(/([A-Z])/g, matchMap);
   console.log(newNums)
 
