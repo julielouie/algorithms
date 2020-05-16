@@ -8,9 +8,9 @@ function formatPhone(phoneNums) {
   return phoneNums.replace(/([A-Z])/g, matchMap);
 }
 
-// const nums = '800-YOU-RANG';
+const nums = '800-YOU-RANG';
 // const nums = '800-588-2300';
 // const nums = '234-NOT-HERE';
-const nums = '751-LOL-8274';
+// const nums = '751-LOL-8274';
 
 console.log(formatPhone(nums));
