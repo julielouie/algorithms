@@ -1,12 +1,10 @@
 function isFullHouse(handArr) {
+  if (new Set(handArr).size !== 2) return false;
   const parsedHand = [];
   handArr.forEach(card => {
     if (!Number.isNaN(+card)) parsedHand.push(+card);
     else parsedHand.push(card);
   })
-  console.log(parsedHand)
-  const sorted = parsedHand.sort();
-  console.log(sorted)
   const split = [sorted.slice(0, 2), sorted.slice(2, 5)];
   const check1 = new Set(split[0]).size === 1;
   const check2 = new Set(split[1]).size === 1;
