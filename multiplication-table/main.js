@@ -1,6 +1,8 @@
 function multiply(X) {
-  for (let index = 1; index <= X; index++) {
-    console.log(`${X} x ${index} = ${X * index}`)
+  for (let firstIndex = 1; firstIndex < 12; firstIndex++) {
+    for (let secIndex = 1; secIndex <= X; secIndex++) {
+      console.log(``);
+    }
   }
 }
 
