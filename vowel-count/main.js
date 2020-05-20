@@ -1,6 +1,7 @@
 function countVowels(str) {
   let count = 0;
 
+  return count;
 }
 
 const str = "supercalifragilisticexpialidocious"; // 16
