@@ -1,7 +1,7 @@
 function countVowels(str) {
   let count = 0;
   str.toLowerCase().split('').forEach(letter => {
-
+    count = letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' ? count++ : count;
   });
   return count;
 }
