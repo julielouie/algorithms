@@ -1,6 +1,8 @@
 function countVowels(str) {
   let count = 0;
+  str.toLowerCase().split('').forEach(letter => {
 
+  });
   return count;
 }
 
