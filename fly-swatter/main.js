@@ -3,6 +3,7 @@ function removeFlys(str) {
   if (regex.test(str)) {
     return str.replace(regex, '');
   }
+  return 'No flies here!';
 }
 
 const str = "flyflyfflllgoflyyyyflynefffff"; // 'gone'
