@@ -1,9 +1,11 @@
 function removeFlys(str) {
   const regex = RegExp(/([fly])\w*/g);
+  const matchChar = match => {
+    if (match === 'f' || match === 'l' || match === 'y') return '';
+  };
   if (regex.test(str)) {
-    str.replace(regex, '');
+    return str.replace(regex, matchChar);
   }
-  return str;
 }
 
 const str = "flyflyfflllgoflyyyyflynefffff"; // 'gone'
