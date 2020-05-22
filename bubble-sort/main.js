@@ -1,14 +1,12 @@
 function bubbleSort(numsArr) {
   const length = numsArr.length;
-  let temp = 0, current = 0, checker = 0;
+  let temp = null;
   for (let outer = 0; outer < length; outer++) {
-    current = numsArr[outer];
     for (let inner = 0; inner < length; inner++) {
-      checker = numsArr[inner];
-      if (current > checker) {
-        temp = current;
-        numsArr[outer] = checker;
-        numsArr[inner] = temp;
+      if (numsArr[inner] > numsArr[inner + 1]) {
+        temp = numsArr[inner];
+        numsArr[inner] = numsArr[inner + 1];
+        numsArr[inner + 1] = temp;
       }
     }
   }
