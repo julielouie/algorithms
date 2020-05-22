@@ -1,5 +1,18 @@
 function bubbleSort(numsArr) {
-
+  const length = numsArr.length;
+  let temp = 0, current = 0, checker = 0;
+  for (let outer = 0; outer < length; outer++) {
+    current = numsArr[outer];
+    for (let inner = 0; inner < length; inner++) {
+      checker = numsArr[inner];
+      if (current > checker) {
+        temp = current;
+        numsArr[outer] = checker;
+        numsArr[inner] = temp;
+      }
+    }
+  }
+  return numsArr;
 }
 
 const nums = [8, 4, 3, 2, 5, 7, 1, 98];
