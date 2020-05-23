@@ -4,24 +4,24 @@ function inBox(box) {
       continue;
     } else {
       const starAt = box[index].indexOf('*');
-      if (starAt !== 0 && starAt < box[index].length) return true;
+      if (starAt !== 0 && starAt < box[index].length - 1) return true;
     }
   }
   return false;
 }
 
-const box = [
-  "####",
-  "#* #",
-  "#  #",
-  "####"
-]; // true
-
 // const box = [
-//   "*####",
-//   "# #",
-//   "#  #*",
+//   "####",
+//   "#* #",
+//   "#  #",
 //   "####"
-// ]; // false
+// ]; // true
+
+const box = [
+  "*####",
+  "# #",
+  "#  #*",
+  "####"
+]; // false
 
 console.log(inBox(box));
