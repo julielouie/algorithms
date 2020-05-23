@@ -9,19 +9,3 @@ function inBox(box) {
   }
   return false;
 }
-
-// const box = [
-//   "####",
-//   "#* #",
-//   "#  #",
-//   "####"
-// ]; // true
-
-const box = [
-  "*####",
-  "# #",
-  "#  #*",
-  "####"
-]; // false
-
-console.log(inBox(box));
