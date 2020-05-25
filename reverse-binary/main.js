@@ -4,10 +4,10 @@ function reversedBinaryInteger(num) {
   return parseInt(reversed, 2);
 }
 
-const num = 10; //5
+// const num = 10; //5
 // const num = 12; //3
 // const num = 25; //19
-// const num = 45; //45
+const num = 45; //45
 
 // 10 = 1010 -> 0101 = 5
 // 12 = 1100 -> 0011 = 3
