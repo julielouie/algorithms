@@ -1,7 +1,7 @@
 function reversedBinaryInteger(num) {
   const bin = (num >>> 0).toString(2);
-  console.log(bin);
-
+  const reversed = bin.split('').reverse().join('');
+  console.log(reversed)
 }
 
 const num = 10; //5
