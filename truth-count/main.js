@@ -1,4 +1,4 @@
-function countTrue(array) {
+function countTrue(arr) {
 
 }
 
