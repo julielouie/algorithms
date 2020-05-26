@@ -1,5 +1,6 @@
 function countTrue(arr) {
-
+  let count = 0;
+  arr.forEach(element => element ? count++ : null);
 }
 
 const array = [true, false, false, true, false]; // 2
